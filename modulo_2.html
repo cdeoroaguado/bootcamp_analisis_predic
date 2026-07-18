@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Módulo 2: Exploración y preparación de datos &#8212; Ciencia de datos con Python para la toma de decisiones</title>
   
@@ -15,60 +14,58 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6c7211e7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'modulo_2';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Módulo 3: Tratamiento de datos faltantes y outliers" href="modulo_3.html" />
     <link rel="prev" title="Módulo 1: Introducción y entorno de trabajo" href="modulo_1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -79,19 +76,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -113,12 +114,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -133,9 +142,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -145,12 +158,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Ciencia de datos con Python para la toma de decisiones - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Ciencia de datos con Python para la toma de decisiones - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -163,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="modulo_1.html"><strong>Módulo 1: Introducción y entorno de trabajo</strong></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#"><strong>Módulo 2: Exploración y preparación de datos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modulo_3.html"><strong>Módulo 3: Tratamiento de datos faltantes y outliers</strong></a></li>
 </ul>
 
     </div>
@@ -178,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -187,14 +212,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -316,26 +341,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -413,17 +440,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modulo-2-exploracion-y-preparacion-de-datos">
-<h1><strong>Módulo 2: Exploración y preparación de datos</strong><a class="headerlink" href="#modulo-2-exploracion-y-preparacion-de-datos" title="Permalink to this heading">#</a></h1>
+<h1><strong>Módulo 2: Exploración y preparación de datos</strong><a class="headerlink" href="#modulo-2-exploracion-y-preparacion-de-datos" title="Link to this heading">#</a></h1>
 <p>La <strong>estadística descriptiva</strong> proporciona un marco para resumir y visualizar grandes volúmenes de datos operativos y comerciales en la empresa Triple A de Barranquilla, tales como registros de consumo de agua, facturación, mantenimiento de redes, atención al usuario y gestión de residuos sólidos. Mediante el uso de medidas como la media, la mediana, la desviación estándar y los percentiles, la empresa puede identificar patrones en el comportamiento de los usuarios, como tendencias de consumo, zonas con mayores pérdidas de agua, frecuencia de reclamos y niveles de pago de los servicios públicos. Esta información es crucial para segmentar usuarios, optimizar procesos operativos, diseñar campañas de uso eficiente de los recursos y mejorar la calidad de los servicios ofrecidos.</p>
 <p>Por otro lado, la <strong>estadística inferencial</strong> permite a Triple A realizar predicciones y tomar decisiones informadas bajo incertidumbre. A través de técnicas como pruebas de hipótesis, modelos de regresión y análisis de varianza (ANOVA), se puede inferir, por ejemplo, qué factores influyen en el aumento del consumo de agua, cómo afectan las condiciones climáticas la demanda de los servicios o cuál es el impacto de los programas de mantenimiento sobre la satisfacción de los usuarios. Estas inferencias son fundamentales para la planificación operativa, la gestión eficiente de recursos y la toma de decisiones estratégicas orientadas a la sostenibilidad y mejora continua de la empresa.</p>
 <section id="estadistica-descriptiva">
-<h2><strong>2.1 Estadística descriptiva</strong><a class="headerlink" href="#estadistica-descriptiva" title="Permalink to this heading">#</a></h2>
+<h2><strong>2.1 Estadística descriptiva</strong><a class="headerlink" href="#estadistica-descriptiva" title="Link to this heading">#</a></h2>
 <p>La estadística descriptiva es una rama de las matemáticas que se encarga de analizar, interpretar y presentar de manera estructurada los datos obtenidos a través de diferentes fuentes. Con Python y sus múltiples librerías de análisis de datos, podemos realizar de manera sencilla estadística descriptiva. Para el desarrollo óptimo de la parte estadística debemos conocer las funciones implementadas en python <a class="reference external" href="https://docs.scipy.org/doc/scipy/tutorial/stats.html">Enlace</a></p>
 <section id="poblacion-y-muestra">
-<h3><strong>2.1.1. Población y muestra</strong><a class="headerlink" href="#poblacion-y-muestra" title="Permalink to this heading">#</a></h3>
+<h3><strong>2.1.1. Población y muestra</strong><a class="headerlink" href="#poblacion-y-muestra" title="Link to this heading">#</a></h3>
 <p>La <strong>estadística</strong> es la ciencia de recolectar, organizar, analizar e interpretar información. Las
 estadísticas son números obtenidos de un conjunto o colección de datos.</p>
 <ul class="simple">
@@ -440,7 +467,7 @@ elemento de la población.</p></li>
 </ul>
 </section>
 <section id="tipos-de-datos">
-<h3><strong>2.1.2. Tipos de datos</strong><a class="headerlink" href="#tipos-de-datos" title="Permalink to this heading">#</a></h3>
+<h3><strong>2.1.2. Tipos de datos</strong><a class="headerlink" href="#tipos-de-datos" title="Link to this heading">#</a></h3>
 <p>De forma general los datos se clasifican en cuantitativos o numéricos y cualitativos o categóricos, mismos que se subdividen tal como se indica en la siguiente figura:</p>
 <p><img alt="tipo" src="_images/tipo.png" /></p>
 <p>Analicemos el siguiente conjunto de datos:</p>
@@ -577,7 +604,7 @@ elemento de la población.</p></li>
 </div></div></div>
 </div>
 <p>Esta es la descripción de las variables</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head text-center"><p>Variable</p></th>
 <th class="head text-left"><p>Descripción</p></th>
@@ -616,6 +643,7 @@ elemento de la población.</p></li>
 </tr>
 </tbody>
 </table>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -804,10 +832,10 @@ memory usage: 1.1 MB
 </div>
 </section>
 <section id="descriptivo-univariado">
-<h3><strong>2.1.3. Descriptivo univariado</strong><a class="headerlink" href="#descriptivo-univariado" title="Permalink to this heading">#</a></h3>
+<h3><strong>2.1.3. Descriptivo univariado</strong><a class="headerlink" href="#descriptivo-univariado" title="Link to this heading">#</a></h3>
 <p>Si la variable es categórica.</p>
 <section id="medidas-de-conteo-y-proporciones">
-<h4><strong>Medidas de conteo y proporciones</strong><a class="headerlink" href="#medidas-de-conteo-y-proporciones" title="Permalink to this heading">#</a></h4>
+<h4><strong>Medidas de conteo y proporciones</strong><a class="headerlink" href="#medidas-de-conteo-y-proporciones" title="Link to this heading">#</a></h4>
 <p>El análisis de frecuencia es una técnica estadística que se utiliza para contar la cantidad de veces que ocurre cada categoría o valor dentro de una variable, generalmente en variables categóricas o discretas. Este tipo de análisis ayudar a identificar patrones 0 valores más comunes.</p>
 <p><strong>Componentes clave del análisis de frecuencia</strong>:</p>
 <p>Analicemos nuestra variable respuesta (<strong>target</strong>) <code class="docutils literal notranslate"><span class="pre">loan_status</span></code> para el modelo.</p>
@@ -915,12 +943,14 @@ G         317    0.008190
 <p>Si nuestra variable es <em>numérica</em>.</p>
 </section>
 <section id="medidas-de-tendencia-central">
-<h4><strong>Medidas de tendencia central</strong><a class="headerlink" href="#medidas-de-tendencia-central" title="Permalink to this heading">#</a></h4>
+<h4><strong>Medidas de tendencia central</strong><a class="headerlink" href="#medidas-de-tendencia-central" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Media aritmética o promedio</strong>: Para un conjunto de <span class="math notranslate nohighlight">\(n\)</span> valores <span class="math notranslate nohighlight">\(x_{1},x_{2},\dots,x_{n}\)</span> que representan una muestra, la</p></li>
 </ul>
-<p>$$
-\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\frac{1}{n}(x_{1}+x_{2}+\cdots+x_{n})</p>
+<div class="math notranslate nohighlight">
+\[
+\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x_{i}=\frac{1}{n}(x_{1}+x_{2}+\cdots+x_{n})
+\]</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;annual_inc&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
@@ -994,7 +1024,7 @@ x_{\frac{n+1}{2}}, &amp; \text{si }  n  \text{ es impar}\\
 </div>
 </section>
 <section id="medidas-de-dispersion">
-<h4><strong>Medidas de dispersión</strong><a class="headerlink" href="#medidas-de-dispersion" title="Permalink to this heading">#</a></h4>
+<h4><strong>Medidas de dispersión</strong><a class="headerlink" href="#medidas-de-dispersion" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>La <strong>varianza</strong> <span class="math notranslate nohighlight">\(s^2\)</span> de una muestra con valores <span class="math notranslate nohighlight">\(x_1,\ldots,x_n\)</span> se define por</p></li>
 </ul>
@@ -1070,7 +1100,7 @@ respectivamente.</p>
 </ol>
 </section>
 <section id="medidas-de-posicion">
-<h4><strong>Medidas de posición</strong><a class="headerlink" href="#medidas-de-posicion" title="Permalink to this heading">#</a></h4>
+<h4><strong>Medidas de posición</strong><a class="headerlink" href="#medidas-de-posicion" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(p\)</span>-ésimo (punto) percentil</strong> es un valor tal que a lo más un <span class="math notranslate nohighlight">\(p\%\)</span> de los datos tienen dicho valor o menos.</p>
 <p>Los <strong>cuartiles</strong> son las medidas de posición relativa correspondientes a un conjunto de datos divididos en cuatro partes iguales. Se definen así:</p>
 <ul class="simple">
@@ -1271,10 +1301,10 @@ Name: annual_inc, dtype: float64
 </section>
 </section>
 <section id="descriptivo-bivariado">
-<h3><strong>2.1.4. Descriptivo bivariado</strong><a class="headerlink" href="#descriptivo-bivariado" title="Permalink to this heading">#</a></h3>
+<h3><strong>2.1.4. Descriptivo bivariado</strong><a class="headerlink" href="#descriptivo-bivariado" title="Link to this heading">#</a></h3>
 <p>El resumen estadístico bivariado se refiere al estudio de dos variables simultáneamente para determinar si existe alguna relación o asociación entre ellas. Solo realizaremos las tablas para dicho análisis estadístico.</p>
 <section id="variable-categorica-vs-variable-numerica">
-<h4><strong>Variable categórica vs variable numérica</strong><a class="headerlink" href="#variable-categorica-vs-variable-numerica" title="Permalink to this heading">#</a></h4>
+<h4><strong>Variable categórica vs variable numérica</strong><a class="headerlink" href="#variable-categorica-vs-variable-numerica" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># descriptivo ingreso anual según la suscripcion solo una variable</span>
@@ -1311,7 +1341,7 @@ Fully Paid     42000.0    85000.0
 </div>
 </section>
 <section id="variable-categorica-vs-variable-categorica">
-<h4><strong>Variable categórica vs variable categórica</strong><a class="headerlink" href="#variable-categorica-vs-variable-categorica" title="Permalink to this heading">#</a></h4>
+<h4><strong>Variable categórica vs variable categórica</strong><a class="headerlink" href="#variable-categorica-vs-variable-categorica" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -1372,7 +1402,7 @@ Total                       16499             9819     12387  38705
 </div>
 </section>
 <section id="correlacion">
-<h4><strong>Correlación</strong><a class="headerlink" href="#correlacion" title="Permalink to this heading">#</a></h4>
+<h4><strong>Correlación</strong><a class="headerlink" href="#correlacion" title="Link to this heading">#</a></h4>
 <p>La <strong>correlación</strong> es una medida estadística que describe el grado de relación entre dos variables. Específicamente, indica la fuerza y la dirección de la asociación lineal entre las variables. Los valores de correlación varían entre -1 y 1:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(+1\)</span> indica una correlación positiva perfecta (a medida que una variable aumenta, la otra también lo hace).</p></li>
@@ -1437,7 +1467,7 @@ loan_amnt     0.425268   0.25359   1.000000
 </section>
 </section>
 <section id="distribuciones">
-<h2><strong>2.2. Distribuciones</strong><a class="headerlink" href="#distribuciones" title="Permalink to this heading">#</a></h2>
+<h2><strong>2.2. Distribuciones</strong><a class="headerlink" href="#distribuciones" title="Link to this heading">#</a></h2>
 <p>Un <strong>histograma</strong> muestra la frecuencia de ocurrencias de datos en un gráfico de barras. Más específicamente, indica con qué frecuencia ocurre cada valor distinto en el conjunto de datos. El eje horizontal representa los valores del conjunto de datos y el eje vertical representa el número de veces que ocurren esos valores.</p>
 <p>Un histograma es un ejemplo específico de una <strong>distribución</strong>.</p>
 <p>Las <strong>distribuciones continuas</strong> permiten que <em>los datos tomen un número infinito de valores posibles</em>. Algunos ejemplos incluyen:</p>
@@ -1459,7 +1489,7 @@ loan_amnt     0.425268   0.25359   1.000000
 <p><img alt="Distribuciones" src="_images/Distributions.png" /></p>
 <p>Más información sobre distribuciones <a class="reference external" href="https://github.com/rasmusab/distribution_diagrams">aquí</a></p>
 <section id="distribucion-normal">
-<h3><strong>2.2.1. Distribución normal</strong><a class="headerlink" href="#distribucion-normal" title="Permalink to this heading">#</a></h3>
+<h3><strong>2.2.1. Distribución normal</strong><a class="headerlink" href="#distribucion-normal" title="Link to this heading">#</a></h3>
 <p>La <strong>distribución normal</strong> es una de las distribuciones más importantes, ya que es la que con mayor frecuencia aproxima fenómenos del mundo real. Tiene una forma “campana” y es simétrica:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1488,9 +1518,9 @@ loan_amnt     0.425268   0.25359   1.000000
 </section>
 </section>
 <section id="inferencia-estadistica">
-<h2><strong>2.3. Inferencia estadística</strong><a class="headerlink" href="#inferencia-estadistica" title="Permalink to this heading">#</a></h2>
+<h2><strong>2.3. Inferencia estadística</strong><a class="headerlink" href="#inferencia-estadistica" title="Link to this heading">#</a></h2>
 <section id="pruebas-de-hipotesis">
-<h3><strong>2.3.1. Pruebas de hipótesis</strong><a class="headerlink" href="#pruebas-de-hipotesis" title="Permalink to this heading">#</a></h3>
+<h3><strong>2.3.1. Pruebas de hipótesis</strong><a class="headerlink" href="#pruebas-de-hipotesis" title="Link to this heading">#</a></h3>
 <p><strong>Las pruebas de hipótesis</strong> son un procedimiento esencial en estadística. Una prueba de hipótesis evalúa dos declaraciones mutuamente excluyentes sobre una población para determinar cuál de ellas está mejor respaldada por los datos de la muestra. Cuando decimos que un hallazgo es <em>estadísticamente significativo</em>, es gracias a una prueba de hipótesis.</p>
 <p>La primera hipótesis se denomina generalmente <strong>hipótesis nula</strong> y es una declaración general o punto de vista predeterminado que indica que no hay relación entre dos fenómenos medidos o ninguna asociación entre grupos. Se puede considerar como una suposición del statu quo. Por ejemplo, “La producción de la Empresa X es igual a 50 unidades por día”.</p>
 <p>La <strong>hipótesis alternativa</strong> es la segunda hipótesis, y se establece en oposición a la hipótesis nula. Por lo general, se toma como la afirmación de que los fenómenos observados en los datos son el resultado de un efecto real y no aleatorio. Por ejemplo, “La producción de la Empresa X no es igual a 50 unidades por día”.</p>
@@ -1524,7 +1554,7 @@ Por consecuencia el banco comete un error tipo II al perder la oportunidad de ot
 </section>
 </section>
 <section id="visualizacion-sencilla-de-datos">
-<h2><strong>2.4. Visualización sencilla de datos</strong><a class="headerlink" href="#visualizacion-sencilla-de-datos" title="Permalink to this heading">#</a></h2>
+<h2><strong>2.4. Visualización sencilla de datos</strong><a class="headerlink" href="#visualizacion-sencilla-de-datos" title="Link to this heading">#</a></h2>
 <p><strong>Matplotlib</strong> es una biblioteca de visualización de datos en Python ampliamente utilizada, especialmente en los campos de la ciencia de datos, la ingeniería y la investigación. Permite crear una amplia gama de gráficos, desde simples gráficos de líneas y dispersión hasta complejas visualizaciones tridimensionales y gráficos interactivos.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características principales de Matplotlib</strong></p>
@@ -1564,7 +1594,8 @@ Por consecuencia el banco comete un error tipo II al perder la oportunidad de ot
 <p><strong>Temas de Estilo Integrados</strong>: <code class="docutils literal notranslate"><span class="pre">Seaborn</span></code> tiene temas de estilo incorporados como darkgrid, whitegrid, dark, white, y ticks, que se pueden aplicar fácilmente a los gráficos para mejorar la estética.</p>
 <p>Para el desarrollo de las visualización trabajaremos con datos sobre los almacenes Walmart, que es un cadena de grande almacenes de Ewa.</p>
 <figure class="align-center" id="walmart">
-<a class="reference internal image-reference" href="_images/walmart.png"><img alt="_images/walmart.png" src="_images/walmart.png" style="width: 488.5px; height: 268.5px;" /></a>
+<a class="reference internal image-reference" href="_images/walmart.png"><img alt="_images/walmart.png" src="_images/walmart.png" style="width: 488.5px; height: 268.5px;" />
+</a>
 </figure>
 <p>El conjunto de datos completos lo puede encontrar este <a class="reference external" href="https://www.kaggle.com/datasets/yasserh/walmart-dataset/data">link</a>. Trabajaremos un subconjunto de datos contiene las ventas semanales en dolares, cada tienda tiene un número de identificación y un tipo de tienda específico, las ventas estan separadas por ID de departamento. Junto con las ventas hay variables como si fue de vacaciones o no, la temperatura media durante la semana en esa localidad, el tiempo medio del combustible en dolares por litro esa semana y la tasa de desempleo de esa semana</p>
 <p>Aquí tienes una explicación de las variables en el conjunto de datos de ventas proporcionado:</p>
@@ -1829,7 +1860,7 @@ memory usage: 768.2+ KB
 </div>
 <p><strong>Matplotlib</strong> es especialmente útil cuando necesitas crear gráficos personalizados y detallados, y es una herramienta esencial para cualquier persona que trabaje con visualización de datos en Python. Haremos unas gráficas univariadas</p>
 <section id="histograma">
-<h3><strong>Histograma</strong><a class="headerlink" href="#histograma" title="Permalink to this heading">#</a></h3>
+<h3><strong>Histograma</strong><a class="headerlink" href="#histograma" title="Link to this heading">#</a></h3>
 <p>Un <strong>histograma</strong> es una representación gráfica que muestra la distribución de una variable continua. Se divide el rango de valores en intervalos (<code class="docutils literal notranslate"><span class="pre">bins</span></code>) y se cuenta cuántos valores caen en cada intervalo.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características del histograma</strong></p>
@@ -1906,7 +1937,7 @@ memory usage: 768.2+ KB
 </div>
 </section>
 <section id="densidad">
-<h3><strong>Densidad</strong><a class="headerlink" href="#densidad" title="Permalink to this heading">#</a></h3>
+<h3><strong>Densidad</strong><a class="headerlink" href="#densidad" title="Link to this heading">#</a></h3>
 <p>Una <strong>gráfica de densidad</strong> es una representación gráfica suave de la distribución de una variable continua. Se basa en la estimación de la función de densidad de probabilidad (KDE, por sus siglas en inglés), lo que permite visualizar la forma general de la distribución sin depender de intervalos rígidos como en los histogramas.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características de la gráfica de densidad</strong></p>
@@ -1975,7 +2006,7 @@ memory usage: 768.2+ KB
 </div>
 </section>
 <section id="histograma-con-funcion-de-densidad">
-<h3><strong>Histograma con función de densidad</strong><a class="headerlink" href="#histograma-con-funcion-de-densidad" title="Permalink to this heading">#</a></h3>
+<h3><strong>Histograma con función de densidad</strong><a class="headerlink" href="#histograma-con-funcion-de-densidad" title="Link to this heading">#</a></h3>
 <p>Un <strong>histograma con función de densidad</strong> combina la representación clásica del histograma (que agrupa los datos en intervalos) con una <strong>curva de densidad suave</strong> (estimación KDE). Esta combinación permite visualizar tanto la frecuencia aproximada de los valores como la forma general de la distribución de los datos.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características del histograma con función de densidad</strong></p>
@@ -2084,7 +2115,7 @@ muestra los valores transformados en logaritmos de la variable del precio, y vem
 </div>
 </section>
 <section id="cajas-y-bigotes">
-<h3><strong>Cajas y bigotes</strong><a class="headerlink" href="#cajas-y-bigotes" title="Permalink to this heading">#</a></h3>
+<h3><strong>Cajas y bigotes</strong><a class="headerlink" href="#cajas-y-bigotes" title="Link to this heading">#</a></h3>
 <p>Un gráfico de cajas y bigotes visualiza la distribución de un conjunto de datos, mostrando la mediana y los cuartiles, así como los posibles outliers.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características de la cajas y bigotes</strong></p>
@@ -2168,7 +2199,7 @@ muestra los valores transformados en logaritmos de la variable del precio, y vem
 </div>
 </section>
 <section id="barras">
-<h3><strong>Barras</strong><a class="headerlink" href="#barras" title="Permalink to this heading">#</a></h3>
+<h3><strong>Barras</strong><a class="headerlink" href="#barras" title="Link to this heading">#</a></h3>
 <p>Una gráfica de barras se utiliza para mostrar y comparar cantidades entre diferentes categorías. Cada barra representa una categoría, y su altura es proporcional al valor que representa.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características de las barras</strong></p>
@@ -2257,7 +2288,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="otras-forma-de-realizar-graficos-de-barras">
-<h3><strong>Otras forma de realizar gráficos de barras</strong><a class="headerlink" href="#otras-forma-de-realizar-graficos-de-barras" title="Permalink to this heading">#</a></h3>
+<h3><strong>Otras forma de realizar gráficos de barras</strong><a class="headerlink" href="#otras-forma-de-realizar-graficos-de-barras" title="Link to this heading">#</a></h3>
 <p>Aprenderemos a crear una tabla utilizando la función <code class="docutils literal notranslate"><span class="pre">pandas</span> <span class="pre">crosstab</span></code>. Utilizaremos una tabla para generar un gráfico de barras. A continuación, exploraremos un gráfico de barras generado con la biblioteca <code class="docutils literal notranslate"><span class="pre">seaborn</span></code> y calcularemos la distribución del promedio de <code class="docutils literal notranslate"><span class="pre">weekly_sales</span></code> según el <code class="docutils literal notranslate"><span class="pre">store</span></code>. Para ello, vamos a realizar los siguientes pasos:</p>
 <ul class="simple">
 <li><p>Imprime los valores únicos de la columna corte. usemos <code class="docutils literal notranslate"><span class="pre">unique()</span></code> devuelve un array. El número de valores únicos se puede obtener utilizando <code class="docutils literal notranslate"><span class="pre">nunique()</span></code> en <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p></li>
@@ -2510,7 +2541,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="circulares">
-<h3><strong>Circulares</strong><a class="headerlink" href="#circulares" title="Permalink to this heading">#</a></h3>
+<h3><strong>Circulares</strong><a class="headerlink" href="#circulares" title="Link to this heading">#</a></h3>
 <p>Un diagrama circular (o gráfico de pastel) es una representación gráfica que muestra la proporción de diferentes categorías dentro de un conjunto de datos como segmentos de un círculo. Cada segmento del círculo representa una categoría y su tamaño es proporcional a su frecuencia o porcentaje en relación con el total.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características del diagrama circular</strong></p>
@@ -2586,7 +2617,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 <p>Ahora haremos unas gráficas bivariadas.</p>
 </section>
 <section id="lineas">
-<h3><strong>Lineas</strong><a class="headerlink" href="#lineas" title="Permalink to this heading">#</a></h3>
+<h3><strong>Lineas</strong><a class="headerlink" href="#lineas" title="Link to this heading">#</a></h3>
 <p>Una gráfica de líneas conecta una serie de puntos de datos con líneas, generalmente utilizada para mostrar cambios o tendencias a lo largo del tiempo.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características del diagrama de lineas</strong></p>
@@ -2716,7 +2747,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="dispersion-scatter-plots">
-<h3><strong>Dispersión (Scatter Plots)</strong><a class="headerlink" href="#dispersion-scatter-plots" title="Permalink to this heading">#</a></h3>
+<h3><strong>Dispersión (Scatter Plots)</strong><a class="headerlink" href="#dispersion-scatter-plots" title="Link to this heading">#</a></h3>
 <p>Una gráfica de dispersión muestra la relación entre dos variables numéricas mediante puntos dispersos en un plano cartesiano.</p>
 <div class="note admonition">
 <p class="admonition-title"><strong>Características del diagrama de dispersión</strong></p>
@@ -2777,7 +2808,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="histogramas-con-variable-categorica">
-<h3><strong>Histogramas con variable categórica</strong><a class="headerlink" href="#histogramas-con-variable-categorica" title="Permalink to this heading">#</a></h3>
+<h3><strong>Histogramas con variable categórica</strong><a class="headerlink" href="#histogramas-con-variable-categorica" title="Link to this heading">#</a></h3>
 <p>Para hacer estos histogramas debemos tener una variable numérica según una variable categórica</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2826,7 +2857,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="cajas-y-bigotes-con-variable-categorica">
-<h3><strong>Cajas y bigotes con variable categórica</strong><a class="headerlink" href="#cajas-y-bigotes-con-variable-categorica" title="Permalink to this heading">#</a></h3>
+<h3><strong>Cajas y bigotes con variable categórica</strong><a class="headerlink" href="#cajas-y-bigotes-con-variable-categorica" title="Link to this heading">#</a></h3>
 <p>Para hacer estos diagramas de cajas y bigotes debemos tener una variable numérica según una variable categórica</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2898,7 +2929,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="diagrama-de-barras-con-variables-categoricas">
-<h3><strong>Diagrama de barras con variables categóricas</strong><a class="headerlink" href="#diagrama-de-barras-con-variables-categoricas" title="Permalink to this heading">#</a></h3>
+<h3><strong>Diagrama de barras con variables categóricas</strong><a class="headerlink" href="#diagrama-de-barras-con-variables-categoricas" title="Link to this heading">#</a></h3>
 <p>Realizaremos un diagrama de barras con dos variables categóricas</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2986,7 +3017,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 <p>Este módulo ha proporcionado una base sólida en la importación, manipulación y visualización de datos en Python. Las habilidades adquiridas permitirán crear visualizaciones efectivas que faciliten la interpretación y comunicación de los datos, y la capacidad de manipular y preparar datos adecuadamente es esencial para realizar análisis significativos. La combinación de pandas para la manipulación de datos y Matplotlib para la visualización forma una potente herramienta en el análisis de datos y ciencia de datos.</p>
 </section>
 <section id="diagrama-hexagonal">
-<h3><strong>Diagrama hexagonal</strong><a class="headerlink" href="#diagrama-hexagonal" title="Permalink to this heading">#</a></h3>
+<h3><strong>Diagrama hexagonal</strong><a class="headerlink" href="#diagrama-hexagonal" title="Link to this heading">#</a></h3>
 <p>Existe una versión más elegante de los gráficos de dispersión, llamada <code class="docutils literal notranslate"><span class="pre">hexagonal</span> <span class="pre">binning</span> <span class="pre">plot</span></code> (<code class="docutils literal notranslate"><span class="pre">hexbin</span> <span class="pre">plot</span></code>). En este ejercicio, utilizaremos <code class="docutils literal notranslate"><span class="pre">Seaborn</span></code> para crear una gráfica de dispersión hexagonal (<code class="docutils literal notranslate"><span class="pre">Hexbin</span> <span class="pre">Plot</span></code>) que muestre la relación entre las <strong>ventas semanales</strong> (<code class="docutils literal notranslate"><span class="pre">weekly_sales</span></code>) y el precio de la gasolina en <strong>USD por litro</strong> (<code class="docutils literal notranslate"><span class="pre">fuel_price_usd_per_l</span></code>). Este gráfico es útil para representar la densidad de datos cuando estos se superponen.</p>
 <ol class="arabic simple">
 <li><p>Importemos las bibliotecas necesarias:</p></li>
@@ -3031,7 +3062,7 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </div>
 </section>
 <section id="diagrama-de-contorno">
-<h3><strong>Diagrama de contorno</strong><a class="headerlink" href="#diagrama-de-contorno" title="Permalink to this heading">#</a></h3>
+<h3><strong>Diagrama de contorno</strong><a class="headerlink" href="#diagrama-de-contorno" title="Link to this heading">#</a></h3>
 <p>Los gráficos de contorno son útiles cuando los puntos de datos están densamente poblados en ciertas áreas, ya que muestran la concentración de los datos mediante líneas de contorno. En este ejercicio, crearemos un gráfico de contorno para analizar la relación entre las <strong>ventas semanales</strong> (<code class="docutils literal notranslate"><span class="pre">weekly_sales</span></code>) y el <strong>precio de la gasolina en USD por litro</strong> (<code class="docutils literal notranslate"><span class="pre">fuel_price_usd_per_l</span></code>).</p>
 <ol class="arabic simple">
 <li><p>Importar las bibliotecas necesarias:</p></li>
@@ -3082,14 +3113,14 @@ Fácil de interpretar y comparar diferentes categorías.</p></li>
 </section>
 </section>
 <section id="exploracion-de-datos-con-ydata-profiling">
-<h2><strong>Exploración de Datos con <code class="docutils literal notranslate"><span class="pre">ydata-profiling</span></code></strong><a class="headerlink" href="#exploracion-de-datos-con-ydata-profiling" title="Permalink to this heading">#</a></h2>
+<h2><strong>Exploración de Datos con <code class="docutils literal notranslate"><span class="pre">ydata-profiling</span></code></strong><a class="headerlink" href="#exploracion-de-datos-con-ydata-profiling" title="Link to this heading">#</a></h2>
 <section id="que-es-ydata-profiling">
-<h3><strong>¿Qué es <code class="docutils literal notranslate"><span class="pre">ydata-profiling</span></code>?</strong><a class="headerlink" href="#que-es-ydata-profiling" title="Permalink to this heading">#</a></h3>
+<h3><strong>¿Qué es <code class="docutils literal notranslate"><span class="pre">ydata-profiling</span></code>?</strong><a class="headerlink" href="#que-es-ydata-profiling" title="Link to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">ydata-profiling</span></code> es una herramienta de Python que genera <strong>informes exploratorios automáticos y visuales</strong> a partir de un DataFrame de <code class="docutils literal notranslate"><span class="pre">pandas</span></code>.</p>
 <p>Su objetivo es facilitar la <strong>exploración inicial de datos (EDA)</strong>, mostrando estadísticas, valores nulos, duplicados, correlaciones y más, todo en un informe HTML.</p>
 </section>
 <section id="que-incluye-el-informe">
-<h3><strong>¿Qué incluye el informe?</strong><a class="headerlink" href="#que-incluye-el-informe" title="Permalink to this heading">#</a></h3>
+<h3><strong>¿Qué incluye el informe?</strong><a class="headerlink" href="#que-incluye-el-informe" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Estadísticas descriptivas (media, mediana, desvío estándar, etc.)</p></li>
 <li><p>Detección de valores faltantes y duplicados</p></li>
@@ -40072,11 +40103,10 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="modulo_1.html"
@@ -40087,10 +40117,16 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
         <p class="prev-next-title"><strong>Módulo 1: Introducción y entorno de trabajo</strong></p>
       </div>
     </a>
-</div></div>
-  
+    <a class="right-next"
+       href="modulo_3.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Módulo 3: Tratamiento de datos faltantes y outliers</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
-
                 </footer>
               
             </div>
@@ -40098,6 +40134,7 @@ document.addEventListener(&quot;DOMContentLoaded&quot;, () =&gt; {
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -40174,6 +40211,7 @@ By Carlos de Oro Aguado
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2026, Msc Carlos de Oro Aguado.
@@ -40200,8 +40238,8 @@ By Carlos de Oro Aguado
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

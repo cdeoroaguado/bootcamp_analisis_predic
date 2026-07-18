@@ -1,0 +1,1031 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Módulo 3: Visualización de datos interactivos &#8212; Ciencia de datos con Python para la toma de decisiones</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6c7211e7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'modulo_3_sin_codigo';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Ciencia de datos con Python para la toma de decisiones - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Ciencia de datos con Python para la toma de decisiones - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Bootcamp: Analítica Predictiva con Python
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="modulo_1.html"><strong>Módulo 1: Introducción y entorno de trabajo</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modulo_2.html"><strong>Módulo 2: Exploración y preparación de datos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modulo_3.html"><strong>Módulo 3: Tratamiento de datos faltantes y outliers</strong></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fmodulo_3_sin_codigo.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/modulo_3_sin_codigo.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Módulo 3: Visualización de datos interactivos</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tratamiento-de-datos-faltantes-y-atipicos"><strong>Tratamiento de datos faltantes y atípicos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-datos-faltantes"><strong>Eliminación de datos faltantes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imputacion-de-datos-faltantes"><strong>Imputación de datos faltantes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-categoricos"><strong>Datos categóricos</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-numericos"><strong>Datos numéricos</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tratamiento-de-datos-atipicos"><strong>Tratamiento de datos atípicos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tratamiento"><strong>Tratamiento</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-datos-atipicos"><strong>Eliminación de datos atípicos</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacion-de-iterativeimputer"><strong>Aplicación de <code class="docutils literal notranslate"><span class="pre">IterativeImputer</span></code></strong></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="modulo-3-visualizacion-de-datos-interactivos">
+<h1><strong>Módulo 3: Visualización de datos interactivos</strong><a class="headerlink" href="#modulo-3-visualizacion-de-datos-interactivos" title="Link to this heading">#</a></h1>
+<section id="tratamiento-de-datos-faltantes-y-atipicos">
+<h2><strong>Tratamiento de datos faltantes y atípicos</strong><a class="headerlink" href="#tratamiento-de-datos-faltantes-y-atipicos" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># Cargar el archivo CSV proporcionado</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/cdeoroaguado/Datos/refs/heads/main/dataviz/ds_salaries.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Informacion del dataset</span>
+<span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copia del dataset</span>
+<span class="n">df_va</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Calcular el porcentaje de valores faltantes</span>
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores Faltantes&#39;</span><span class="p">:</span> <span class="n">missing_values</span><span class="p">,</span>
+    <span class="s1">&#39;Porcentaje Faltante (%)&#39;</span><span class="p">:</span> <span class="n">missing_percentage</span>
+<span class="p">})</span>
+
+<span class="n">missing_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="eliminacion-de-datos-faltantes">
+<h3><strong>Eliminación de datos faltantes</strong><a class="headerlink" href="#eliminacion-de-datos-faltantes" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloquemos un umbral</span>
+<span class="n">umbral</span> <span class="o">=</span>  <span class="c1"># TU CODIGO</span>
+
+<span class="c1"># Selecciona columnas con valores faltantes &lt;= umbral</span>
+<span class="n">cols_to_drop</span> <span class="o">=</span> <span class="n">df_va</span> <span class="o">.</span><span class="n">columns</span><span class="p">[</span> <span class="c1"># TU CODIGO]</span>
+
+<span class="c1"># Elimina filas con valores faltantes en las columnas seleccionadas</span>
+<span class="n">df_va</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="n">cols_to_drop</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># informacion del dataset ajustado</span>
+ <span class="c1"># TU CODIGO</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Calcular el porcentaje de valores faltantes</span>
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores Faltantes&#39;</span><span class="p">:</span> <span class="n">missing_values</span><span class="p">,</span>
+    <span class="s1">&#39;Porcentaje Faltante (%)&#39;</span><span class="p">:</span> <span class="n">missing_percentage</span>
+<span class="p">})</span>
+
+<span class="n">missing_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otra forma para eliminar los datos faltantes es:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># copia del dataset</span>
+<span class="n">df_2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># eliminar las filas con Nans</span>
+<span class="n">df_clean</span> <span class="o">=</span>  <span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Calcular el porcentaje de valores faltantes</span>
+
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores Faltantes&#39;</span><span class="p">:</span> <span class="n">missing_values</span><span class="p">,</span>
+    <span class="s1">&#39;Porcentaje Faltante (%)&#39;</span><span class="p">:</span> <span class="n">missing_percentage</span>
+<span class="p">})</span>
+
+<span class="n">missing_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="c1"># Contar frecuencias en cada DataFrame</span>
+<span class="n">original_counts</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">clean_counts</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Unir ambos conteos en un solo DataFrame</span>
+<span class="n">comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
+    <span class="p">[</span><span class="n">original_counts</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Original&quot;</span><span class="p">),</span> <span class="n">clean_counts</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="s2">&quot;Limpio&quot;</span><span class="p">)],</span>
+    <span class="n">axis</span><span class="o">=</span><span class="mi">1</span>
+<span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="c1"># Crear gráfico de barras agrupado</span>
+<span class="n">comparison</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;bar&#39;</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Comparación de valores en &#39;Experience&#39; antes y después de eliminar NaN&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Nivel de experiencia&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Frecuencia&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dataset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chi2_contingency</span>
+
+<span class="c1"># Alinear categorías para evitar errores</span>
+<span class="n">comparison_table</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Prueba chi-cuadrado</span>
+<span class="n">chi2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span> <span class="n">expected</span> <span class="o">=</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">comparison_table</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
+
+<span class="c1"># Mostrar resultados</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prueba Chi-cuadrado de homogeneidad&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estadístico chi²:&quot;</span><span class="p">,</span> <span class="n">chi2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grados de libertad:&quot;</span><span class="p">,</span> <span class="n">dof</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor p:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+
+<span class="c1"># Ignorar warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">,</span> <span class="n">category</span><span class="o">=</span><span class="ne">FutureWarning</span><span class="p">)</span>
+
+<span class="c1"># Crear gráfico de densidad</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="c1"># TU CODIGO AQUI, label=&#39;Original&#39;, linewidth=2)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="c1"># TU CODIGO AQUI, label=&#39;Limpio&#39;, linewidth=2, linestyle=&#39;--&#39;)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de &#39;Remote_Working_Ratio&#39; antes y después de eliminar NaN&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Remote Working Ratio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Densidad&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s2">&quot;Dataset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.3</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># PRUEBA KS </span>
+<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">ks_2samp</span>
+
+<span class="n">stat</span><span class="p">,</span> <span class="n">p_value</span> <span class="o">=</span> <span class="n">ks_2samp</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Remote_Working_Ratio&#39;</span><span class="p">],</span> <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;Remote_Working_Ratio&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Prueba Kolmogorov-Smirnov (KS) para &#39;Remote_Working_Ratio&#39; &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estadístico KS:&quot;</span><span class="p">,</span> <span class="n">stat</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor p:&quot;</span><span class="p">,</span> <span class="n">p_value</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">p_value</span> <span class="o">&lt;</span> <span class="mf">0.05</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Hay diferencias significativas entre las dos distribuciones.&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ No hay evidencia significativa de que las distribuciones sean diferentes.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prueba Kolmogorov-Smirnov (KS) para &#39;Remote_Working_Ratio&#39; 
+Estadístico KS: 0.0018469641951169458
+Valor p: 1.0
+❌ No hay evidencia significativa de que las distribuciones sean diferentes.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="imputacion-de-datos-faltantes">
+<h3><strong>Imputación de datos faltantes</strong><a class="headerlink" href="#imputacion-de-datos-faltantes" title="Link to this heading">#</a></h3>
+<section id="datos-categoricos">
+<h4><strong>Datos categóricos</strong><a class="headerlink" href="#datos-categoricos" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Usando la <strong>moda</strong>:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copia del dataset</span>
+<span class="n">df_3</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Iterar sobre cada columna del DataFrame</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_3</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="c1"># Comprobar si la columna es de tipo objeto (categórica)</span>
+    <span class="k">if</span>  <span class="n">df_3</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtypes</span><span class="o">==</span><span class="s1">&#39;object&#39;</span><span class="p">:</span>
+        <span class="c1"># Imputar los valores faltantes con la moda (categoría más frecuente)</span>
+        <span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Usando <strong>Asignación aleatoria</strong>:</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copia del dataset</span>
+<span class="n">df_4</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Iterar sobre cada columna de df_4</span>
+<span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="n">df_4</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="c1"># Comprobar si la columna es de tipo objeto (categórica)</span>
+    <span class="k">if</span> <span class="n">df_4</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dtypes</span> <span class="o">==</span> <span class="s1">&#39;object&#39;</span><span class="p">:</span>
+        <span class="c1"># Obtener las categorías no faltantes de la columna</span>
+        <span class="n">categorias_no_nan</span> <span class="o">=</span>  <span class="n">df_4</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+        <span class="c1"># Reemplazar valores faltantes con una categoría seleccionada aleatoriamente</span>
+        <span class="n">df_4</span><span class="p">[</span><span class="n">col</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_4</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">categorias_no_nan</span><span class="p">)</span> <span class="k">if</span> <span class="n">pd</span><span class="o">.</span><span class="n">isna</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="datos-numericos">
+<h4><strong>Datos numéricos</strong><a class="headerlink" href="#datos-numericos" title="Link to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Usando <strong>la media o el promedio</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copia del dataset</span>
+<span class="n">df_6</span> <span class="o">=</span> <span class="n">df_4</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Imputar los valores perdidos con imputación de medias</span>
+<span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Usando <strong>la mediana</strong></p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Copia del dataset</span>
+<span class="n">df_7</span> <span class="o">=</span> <span class="n">df_4</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Imputar los valores perdidos con imputación de medias</span>
+<span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Otra manera adecuada de imputar valores ausentes es mediante la clase <code class="docutils literal notranslate"><span class="pre">SimpleImputer</span></code> de <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Libreria</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">SimpleImputer</span>
+
+<span class="c1"># Copia del dataset</span>
+<span class="n">df_8</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Crear la instancia para imputar con la media</span>
+<span class="n">imputer</span> <span class="o">=</span>  <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Imputar los valores faltantes</span>
+<span class="n">df_8</span><span class="p">[[</span><span class="s1">&#39;Working_Year&#39;</span><span class="p">,</span><span class="s1">&#39;Salary_USD&#39;</span><span class="p">]]</span> <span class="o">=</span> <span class="n">imputer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_8</span><span class="p">[[</span><span class="s1">&#39;Working_Year&#39;</span><span class="p">,</span><span class="s1">&#39;Salary_USD&#39;</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="tratamiento-de-datos-atipicos">
+<h3><strong>Tratamiento de datos atípicos</strong><a class="headerlink" href="#tratamiento-de-datos-atipicos" title="Link to this heading">#</a></h3>
+<p>Vamos a crear un gráfico de caja para comprobar si nuestro conjunto de datos contiene valores atípicos. Vamos a utilizar el conjunto de datos <code class="docutils literal notranslate"><span class="pre">gym.csv</span></code>, que contiene información sobre los clientes de un determinado gimnasio.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Guarda el archivo <code class="docutils literal notranslate"><span class="pre">gym.csv</span></code> en un DataFrame llamado <code class="docutils literal notranslate"><span class="pre">gym</span></code>, e imprime las cinco primeras filas del mismo para ver cómo son los datos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gym</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">gym</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como puede ver, nuestros datos tienen tres columnas: <code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">weight</span></code>, <code class="docutils literal notranslate"><span class="pre">sex</span></code>. La columna sexo consta de tres valores discretos que corresponden a tres clases discretas: <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">es</span> <span class="pre">hombre</span></code>, <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">es</span> <span class="pre">mujer</span></code> y <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">es</span> <span class="pre">otro</span></code>.</p>
+<p>Cree un gráfico de caja con el eje <span class="math notranslate nohighlight">\(x\)</span> como columna de sexo y el eje <span class="math notranslate nohighlight">\(y\)</span> como peso:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar plotly</span>
+<span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">import</span> <span class="nn">plotly.io</span> <span class="k">as</span> <span class="nn">pio</span>
+
+<span class="c1"># Configurar el renderizador para notebook o Jupyter Book</span>
+<span class="n">pio</span><span class="o">.</span><span class="n">renderers</span><span class="o">.</span><span class="n">default</span> <span class="o">=</span> <span class="s1">&#39;notebook&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tratamiento">
+<h4><strong>Tratamiento</strong><a class="headerlink" href="#tratamiento" title="Link to this heading">#</a></h4>
+<section id="eliminacion-de-datos-atipicos">
+<h5><strong>Eliminación de datos atípicos</strong><a class="headerlink" href="#eliminacion-de-datos-atipicos" title="Link to this heading">#</a></h5>
+<p>Eliminaremos el dato que contiene el valor atípico del conjunto de datos utilizado previamente y, a continuación, visualizaremos el nuevo conjunto de datos mediante un gráfico de caja actualizado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># informacion</span>
+<span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Modificar el DataFrame del gimnasio para que solo esté formado por los casos <em>en los que el peso sea inferior a 104</em> e imprimir las cinco primeras filas:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gym_clean</span> <span class="o">=</span>  <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">gym_clean</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Vamos a crear un boxplot para ver el aspecto de los datos</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear el diagrama de violín</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Configurar fondo blanco y rejilla gris</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">paper_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>  <span class="c1"># Fondo del gráfico</span>
+    <span class="n">plot_bgcolor</span><span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span>   <span class="c1"># Fondo de la parte de trazado</span>
+    <span class="c1"># xaxis=dict(showgrid=True, gridcolor=&#39;lightgrey&#39;),  # Rejilla gris en el eje x</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">showgrid</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">gridcolor</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">)</span>   <span class="c1"># Rejilla gris en el eje y</span>
+<span class="p">)</span>
+
+<span class="c1"># Actualizar el color de la caja a rojo y agregar línea del promedio más gruesa</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span>
+    <span class="n">box</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">),</span>     <span class="c1"># Color de la caja (rojo)</span>
+    <span class="n">meanline_visible</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>          <span class="c1"># Mostrar línea del promedio</span>
+    <span class="n">meanline</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;darkgreen&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>  <span class="c1"># Línea del promedio más gruesa y en rojo</span>
+<span class="p">)</span>
+
+<span class="c1"># Mostrar el gráfico</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="aplicacion-de-iterativeimputer">
+<h3><strong>Aplicación de <code class="docutils literal notranslate"><span class="pre">IterativeImputer</span></code></strong><a class="headerlink" href="#aplicacion-de-iterativeimputer" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="s1">&#39;?&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># muestra las primeras filas del dataset</span>
+<span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Dame la información del dataset</span>
+<span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Realiza un descriptivo de las variables </span>
+<span class="c1"># TU CODIGO AQUI</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Calcular el porcentaje de valores faltantes</span>
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
+<span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Valores Faltantes&#39;</span><span class="p">:</span> <span class="n">missing_values</span><span class="p">,</span>
+    <span class="s1">&#39;Porcentaje Faltante (%)&#39;</span><span class="p">:</span> <span class="n">missing_percentage</span>
+<span class="p">})</span>
+
+<span class="n">missing_data</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">isnan</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">read_csv</span>
+<span class="kn">from</span> <span class="nn">sklearn.experimental</span> <span class="kn">import</span> <span class="n">enable_iterative_imputer</span>
+<span class="kn">from</span> <span class="nn">sklearn.impute</span> <span class="kn">import</span> <span class="n">IterativeImputer</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">values</span>
+<span class="n">ix</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">23</span><span class="p">]</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Missing: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">sum</span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imputer</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="c1"># TU CODIGO AQUI</span>
+<span class="n">Xtrans</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Missing: </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="nb">sum</span><span class="p">(</span><span class="n">isnan</span><span class="p">(</span><span class="n">Xtrans</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tratamiento-de-datos-faltantes-y-atipicos"><strong>Tratamiento de datos faltantes y atípicos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-datos-faltantes"><strong>Eliminación de datos faltantes</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#imputacion-de-datos-faltantes"><strong>Imputación de datos faltantes</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-categoricos"><strong>Datos categóricos</strong></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#datos-numericos"><strong>Datos numéricos</strong></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tratamiento-de-datos-atipicos"><strong>Tratamiento de datos atípicos</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#tratamiento"><strong>Tratamiento</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h5 nav-item toc-entry"><a class="reference internal nav-link" href="#eliminacion-de-datos-atipicos"><strong>Eliminación de datos atípicos</strong></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aplicacion-de-iterativeimputer"><strong>Aplicación de <code class="docutils literal notranslate"><span class="pre">IterativeImputer</span></code></strong></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Carlos de Oro Aguado
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2026, Msc Carlos de Oro Aguado.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

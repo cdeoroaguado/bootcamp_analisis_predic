@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="./" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Módulo 5: Machine Learning &#8212; Ciencia de datos con Python para la toma de decisiones</title>
   
@@ -15,58 +14,55 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="_static/proof.css" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=6c7211e7" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="_static/doctools.js"></script>
-    <script src="_static/clipboard.min.js"></script>
-    <script src="_static/copybutton.js"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'modulo_5';</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -78,19 +74,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -112,12 +112,22 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -132,9 +142,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="intro.html">
+  
   
   
   
@@ -144,12 +158,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/logo.jpg" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/logo.jpg" class="logo__image only-light" alt="Ciencia de datos con Python para la toma de decisiones - Home"/>
+    <script>document.write(`<img src="_static/logo.jpg" class="logo__image only-dark" alt="Ciencia de datos con Python para la toma de decisiones - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -162,6 +187,7 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="modulo_1.html"><strong>Módulo 1: Introducción y entorno de trabajo</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulo_2.html"><strong>Módulo 2: Exploración y preparación de datos</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modulo_3.html"><strong>Módulo 3: Tratamiento de datos faltantes y outliers</strong></a></li>
 </ul>
 
     </div>
@@ -177,7 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -186,14 +212,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -315,26 +341,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -580,17 +608,17 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modulo-5-machine-learning">
-<h1><strong>Módulo 5: Machine Learning</strong><a class="headerlink" href="#modulo-5-machine-learning" title="Permalink to this heading">#</a></h1>
+<h1><strong>Módulo 5: Machine Learning</strong><a class="headerlink" href="#modulo-5-machine-learning" title="Link to this heading">#</a></h1>
 <p><strong>Machine Learning</strong> (ML), o aprendizaje automático, es una rama de la inteligencia artificial (IA) que se enfoca en construir sistemas capaces de aprender y mejorar automáticamente a partir de los datos sin necesidad de ser programados de manera explícita. Estos sistemas permiten identificar patrones y tomar decisiones basadas en grandes volúmenes de datos, aplicándose en diversas áreas como la clasificación de imágenes, la predicción de ventas o la personalización de recomendaciones.</p>
 <p>Uno de los algoritmos más simples y utilizados en Machine Learning es la <strong>regresión lineal</strong>, que permite predecir una variable continua a partir de la relación entre una variable dependiente y una o más variables independientes. Cuando se consideran múltiples variables independientes, se utiliza la <strong>regresión múltiple</strong> para mejorar las predicciones. A medida que los datos se vuelven más complejos, es importante aplicar técnicas como la <strong>regresión Ridge</strong> y <strong>Lasso</strong>, que introducen penalizaciones para evitar el sobreajuste y mejorar la regularización de los modelos. Ridge tiende a minimizar la magnitud de los coeficientes, mientras que Lasso puede reducir algunos de estos coeficientes a cero, facilitando la selección de las características más relevantes.</p>
 <p>En el ámbito de la clasificación, uno de los algoritmos más comunes es <strong>Naive Bayes</strong>, un modelo probabilístico basado en el teorema de Bayes que resulta especialmente útil para problemas donde se puede asumir independencia entre las características, como la clasificación de texto o el filtrado de correos no deseados. Otro algoritmo utilizado para clasificación es <strong>K-Vecinos Más Cercanos (K-NN)</strong>, que clasifica los nuevos datos en función de la cercanía a sus vecinos más cercanos, lo cual lo convierte en un enfoque intuitivo pero potencialmente costoso cuando se maneja un gran volumen de datos.</p>
 <p>Para abordar problemas más complejos que requieren modelos más potentes, se utilizan algoritmos avanzados como las <strong>Máquinas de Soporte Vectorial (SVM)</strong>, que buscan un hiperplano óptimo para separar las clases en un espacio de características. También destacan los modelos basados en árboles, como <strong>Random Forest</strong>, que combina varios árboles de decisión para mejorar la precisión y robustez del modelo, reduciendo el riesgo de sobreajuste. Un modelo de gran eficacia es <strong>XGBoost</strong>, una técnica de boosting que construye modelos secuenciales de árboles de decisión, lo que lo hace altamente eficiente y efectivo en grandes volúmenes de datos.</p>
 <p>Finalmente,la correcta <strong>evaluación del modelo</strong> es fundamental para garantizar que no solo funcione bien en los datos de entrenamiento, sino que también pueda generalizarse a datos nuevos. Este proceso incluye dividir los datos en conjuntos de entrenamiento y prueba, o utilizar validación cruzada. Las métricas más comunes para evaluar el rendimiento del modelo varían según el tipo de problema. En el caso de la regresión, se suelen utilizar métricas como el error cuadrático medio (MSE), el error absoluto medio (MAE) y el coeficiente de determinación (R²). Para la clasificación, se emplean métricas como la exactitud, la precisión, la recuperación (recall), la F1-Score y la curva ROC-AUC, que permiten medir la capacidad del modelo para distinguir entre las diferentes clases.</p>
 <section id="arthur-samuel-pionero-del-aprendizaje-automatico-y-la-inteligencia-artificial">
-<h2><strong>Arthur Samuel: Pionero del Aprendizaje Automático y la Inteligencia Artificial</strong><a class="headerlink" href="#arthur-samuel-pionero-del-aprendizaje-automatico-y-la-inteligencia-artificial" title="Permalink to this heading">#</a></h2>
+<h2><strong>Arthur Samuel: Pionero del Aprendizaje Automático y la Inteligencia Artificial</strong><a class="headerlink" href="#arthur-samuel-pionero-del-aprendizaje-automatico-y-la-inteligencia-artificial" title="Link to this heading">#</a></h2>
 <p>Arthur Samuel fue un visionario en el campo de la inteligencia artificial y la computación. Nacido en 1901, Samuel se graduó en ingeniería eléctrica y comenzó su carrera trabajando en IBM, donde se convirtió en uno de los pioneros del desarrollo de software y en uno de los primeros en explorar el potencial de las máquinas para “aprender” por sí mismas. A través de su trabajo, sentó las bases de lo que hoy conocemos como <strong>aprendizaje automático</strong> (<em>Machine Learning</em>).</p>
 <p>El logro más reconocido de Samuel fue el desarrollo del programa <strong>“Jugador de Damas”</strong> en 1959, donde utilizó conceptos de lo que más tarde se llamaría <strong>aprendizaje por refuerzo</strong> y <strong>algoritmos heurísticos</strong>. Su programa no solo jugaba a las damas, sino que también era capaz de mejorar su habilidad con el tiempo, jugando contra sí mismo y aprendiendo de sus errores. Lo innovador de este enfoque fue que permitía que el programa ajustara sus estrategias con base en la retroalimentación de las partidas previas, optimizando su desempeño sin intervención humana directa.</p>
 <p>Samuel también fue uno de los primeros en utilizar el término <strong>“aprendizaje automático”</strong>, lo que indica su clara visión de que las máquinas podrían, algún día, desarrollar la capacidad de aprender de manera similar a los humanos. Este concepto marcó un punto de inflexión en la historia de la informática y la IA, ya que introdujo la idea de que las computadoras podían ser programadas no solo para ejecutar tareas específicas, sino también para <strong>aprender y adaptarse</strong> a nuevas situaciones y mejorar su rendimiento a medida que acumulaban experiencia.</p>
@@ -598,7 +626,7 @@ document.write(`
 <p><img alt="arthur" src="_images/arthut.jpg" /></p>
 </section>
 <section id="generalizacion-sobreajuste-y-subajuste">
-<h2><strong>Generalización, sobreajuste y subajuste</strong><a class="headerlink" href="#generalizacion-sobreajuste-y-subajuste" title="Permalink to this heading">#</a></h2>
+<h2><strong>Generalización, sobreajuste y subajuste</strong><a class="headerlink" href="#generalizacion-sobreajuste-y-subajuste" title="Link to this heading">#</a></h2>
 <p>En el <strong>aprendizaje supervisado</strong>, el objetivo principal es construir un modelo a partir de los datos de entrenamiento y que este sea capaz de realizar <strong>predicciones precisas</strong> sobre datos desconocidos que tengan las mismas características que el conjunto de entrenamiento utilizado. Si un modelo es capaz de hacer predicciones acertadas sobre datos nuevos, decimos que tiene la capacidad de <strong>generalizar</strong> desde el conjunto de <strong>entrenamiento</strong> al conjunto de <strong>prueba</strong>. Nuestro objetivo es construir un modelo que pueda <strong>generalizar</strong> con la mayor precisión posible.</p>
 <p>Por lo general, entrenamos un modelo de manera que sea preciso en el conjunto de entrenamiento. Si los conjuntos de <strong>entrenamiento</strong> y de <strong>prueba</strong> comparten suficientes similitudes, esperamos que el modelo también funcione bien en el conjunto de prueba. Sin embargo, esto no siempre es así. Si construimos modelos demasiado complejos, podemos lograr un ajuste perfecto en el conjunto de entrenamiento, pero esto no garantiza que el modelo generalice bien a datos nuevos, lo que lleva a un fenómeno conocido como <strong>sobreajuste</strong>.</p>
 <p>El <strong>sobreajuste (overfitting)</strong> ocurre cuando el modelo se ajusta demasiado a las particularidades y ruido del conjunto de entrenamiento, lo que resulta en un modelo que tiene un rendimiento excelente en dicho conjunto, pero falla al enfrentarse a datos no vistos. Por el contrario, si el modelo es demasiado simple, podría no capturar adecuadamente la complejidad y variabilidad de los datos, causando un mal desempeño tanto en el conjunto de entrenamiento como en el de prueba. Esta situación se conoce como <strong>subajuste (underfitting)</strong>.</p>
@@ -614,22 +642,22 @@ document.write(`
 <p><img alt="sweet_spot" src="_images/sweet_spot.png" /></p>
 </section>
 <section id="regresion">
-<h2><strong>Regresión</strong><a class="headerlink" href="#regresion" title="Permalink to this heading">#</a></h2>
+<h2><strong>Regresión</strong><a class="headerlink" href="#regresion" title="Link to this heading">#</a></h2>
 <p>La <strong>regresión</strong> es una técnica estadística y de aprendizaje automático utilizada para modelar la relación entre una <strong>variable dependiente</strong> (o respuesta) y una o más <strong>variables independientes</strong> (o predictoras). El objetivo principal de la regresión es predecir el valor de la variable dependiente en función de los valores de las variables independientes, o entender cómo las variables independientes influyen en la variable dependiente.</p>
 <p>Existen varios tipos de regresión, siendo los más comunes la <strong>regresión lineal</strong> y la <strong>regresión no lineal</strong>, que se seleccionan en función de la relación entre las variables.</p>
 <section id="tipos-de-regresion">
-<h3><strong>Tipos de regresión</strong><a class="headerlink" href="#tipos-de-regresion" title="Permalink to this heading">#</a></h3>
+<h3><strong>Tipos de regresión</strong><a class="headerlink" href="#tipos-de-regresion" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Regresión lineal</strong>: Este es el tipo más básico de regresión, donde se asume que la relación entre la variable dependiente y las variables independientes es lineal. Se busca ajustar una línea recta que mejor represente los datos, minimizando la distancia entre los puntos de los datos y la línea ajustada. La <strong>regresión lineal simple</strong> involucra solo una variable independiente, mientras que la <strong>regresión lineal múltiple</strong> involucra varias variables independientes.</p></li>
 <li><p><strong>Regresión Ridge y Lasso</strong>: Son variaciones de la regresión lineal que incluyen regularización para evitar el sobreajuste. <strong>Ridge</strong> agrega una penalización a la magnitud de los coeficientes del modelo, mientras que <strong>Lasso</strong> no solo penaliza los coeficientes, sino que también puede llevar algunos de ellos a cero, lo que resulta en la selección automática de características.</p></li>
 </ol>
 </section>
 <section id="modelo-de-regresion-lineal">
-<h3><strong>Modelo de regresión lineal</strong><a class="headerlink" href="#modelo-de-regresion-lineal" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo de regresión lineal</strong><a class="headerlink" href="#modelo-de-regresion-lineal" title="Link to this heading">#</a></h3>
 <p>El objetivo principal de la regresión es encontrar los <strong>coeficientes</strong> que mejor ajusten el modelo, minimizando el <strong>error</strong> o la diferencia entre los valores predichos y los valores reales.</p>
 <p>El modelo tiene la forma:</p>
 <div class="math notranslate nohighlight" id="equation-linear-reg">
-<span class="eqno">()<a class="headerlink" href="#equation-linear-reg" title="Permalink to this equation">#</a></span>\[
+<span class="eqno">()<a class="headerlink" href="#equation-linear-reg" title="Link to this equation">#</a></span>\[
 \boldsymbol{y}=\boldsymbol{X}\boldsymbol{\beta}+\boldsymbol{\varepsilon},
 \]</div>
 <p>este se denomina, <code class="docutils literal notranslate"><span class="pre">modelo</span> <span class="pre">de</span> <span class="pre">regresión</span> <span class="pre">lineal</span></code> clásico, si se cumplen los siguientes supuestos:</p>
@@ -641,7 +669,7 @@ document.write(`
 <li><p>El <code class="docutils literal notranslate"><span class="pre">modelo</span> <span class="pre">de</span> <span class="pre">regresión</span> <span class="pre">lineal</span></code> <a class="reference internal" href="#equation-linear-reg">()</a> puede escribirse en la siguiente forma</p></li>
 </ul>
 <div class="math notranslate nohighlight" id="equation-linear-reg-mat">
-<span class="eqno">()<a class="headerlink" href="#equation-linear-reg-mat" title="Permalink to this equation">#</a></span>\[\begin{split}\begin{pmatrix}
+<span class="eqno">()<a class="headerlink" href="#equation-linear-reg-mat" title="Link to this equation">#</a></span>\[\begin{split}\begin{pmatrix}
 y_{1}\\
 y_{2}\\
 \vdots\\
@@ -702,7 +730,7 @@ y_{n}
 <p><img alt="MRL4" src="_images/MRL_4.png" /></p>
 </section>
 <section id="regresion-lineal-simple">
-<h3><strong>Regresión lineal simple</strong><a class="headerlink" href="#regresion-lineal-simple" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión lineal simple</strong><a class="headerlink" href="#regresion-lineal-simple" title="Link to this heading">#</a></h3>
 <p>El siguiente  conjunto de datos relaciona los años de experiencia laboral con los salarios percibidos por empleados. Estas dos variables ofrecen una perspectiva clave para entender cómo la experiencia profesional puede influir en la remuneración en el contexto laboral.</p>
 <p>Las columnas presentes en el archivo son:</p>
 <ol class="arabic simple">
@@ -711,7 +739,7 @@ y_{n}
 </ol>
 <p>Este tipo de información suele ser relevante en estudios de recursos humanos, análisis de mercado laboral, o al construir modelos de regresión que estimen el salario en función de los años de experiencia, ayudando a identificar patrones o desigualdades salariales.</p>
 <section id="importemos-las-librerias">
-<h4>1. <strong>Importemos las librerias</strong><a class="headerlink" href="#importemos-las-librerias" title="Permalink to this heading">#</a></h4>
+<h4>1. <strong>Importemos las librerias</strong><a class="headerlink" href="#importemos-las-librerias" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># Importa la librería NumPy para operaciones matemáticas avanzadas.</span>
@@ -732,7 +760,7 @@ y_{n}
 </div>
 </section>
 <section id="carguemos-los-datos">
-<h4>2. <strong>Carguemos los datos</strong><a class="headerlink" href="#carguemos-los-datos" title="Permalink to this heading">#</a></h4>
+<h4>2. <strong>Carguemos los datos</strong><a class="headerlink" href="#carguemos-los-datos" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cargar el archivo CSV para inspeccionar su contenido</span>
@@ -744,7 +772,7 @@ y_{n}
 </div>
 </section>
 <section id="eda">
-<h4>3. <strong>EDA</strong><a class="headerlink" href="#eda" title="Permalink to this heading">#</a></h4>
+<h4>3. <strong>EDA</strong><a class="headerlink" href="#eda" title="Link to this heading">#</a></h4>
 <p>Procedemos a realizar un <strong>análisis exploratorio de datos</strong> para investigar y resumir principales características de nuestros datos.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -927,7 +955,7 @@ memory usage: 608.0 bytes
 </div>
 </section>
 <section id="datos-faltantes-o-nans">
-<h4>4. <strong>Datos faltantes o NANs</strong><a class="headerlink" href="#datos-faltantes-o-nans" title="Permalink to this heading">#</a></h4>
+<h4>4. <strong>Datos faltantes o NANs</strong><a class="headerlink" href="#datos-faltantes-o-nans" title="Link to this heading">#</a></h4>
 <p>Verifiquemos además si existen datos faltantes en nuestro conjunto de datos</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -945,7 +973,7 @@ dtype: int64
 </div>
 </section>
 <section id="visualizacion-de-datos">
-<h4>5. <strong>Visualización de datos</strong><a class="headerlink" href="#visualizacion-de-datos" title="Permalink to this heading">#</a></h4>
+<h4>5. <strong>Visualización de datos</strong><a class="headerlink" href="#visualizacion-de-datos" title="Link to this heading">#</a></h4>
 <p>Realicemos un diagrama de cajas y bigotes para el salario</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1039,7 +1067,7 @@ dtype: int64
 </ul>
 </section>
 <section id="construccion-del-modelo">
-<h4>6. <strong>Construcción del modelo</strong><a class="headerlink" href="#construccion-del-modelo" title="Permalink to this heading">#</a></h4>
+<h4>6. <strong>Construcción del modelo</strong><a class="headerlink" href="#construccion-del-modelo" title="Link to this heading">#</a></h4>
 <p>Se ajusta un modelo de regresión lineal utilizando <code class="docutils literal notranslate"><span class="pre">Salary</span></code> como variable respuesta y <code class="docutils literal notranslate"><span class="pre">YearsExperience</span></code> como variable predictora. En cualquier estudio predictivo, no solo es esencial ajustar el modelo, sino también evaluar su capacidad para predecir correctamente nuevas observaciones. Para realizar esta evaluación de manera adecuada, los datos se dividen en dos grupos: uno destinado al entrenamiento del modelo y otro reservado para pruebas, lo que permite validar su rendimiento en datos no utilizados durante el ajuste del modelo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1142,7 +1170,7 @@ lr.intercept_: 25321.583011776813
 </div>
 </section>
 <section id="visualizacion-del-conjunto-de-entrenamiento-y-prueba">
-<h4>7. <strong>Visualización del conjunto de entrenamiento y prueba</strong><a class="headerlink" href="#visualizacion-del-conjunto-de-entrenamiento-y-prueba" title="Permalink to this heading">#</a></h4>
+<h4>7. <strong>Visualización del conjunto de entrenamiento y prueba</strong><a class="headerlink" href="#visualizacion-del-conjunto-de-entrenamiento-y-prueba" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear una figura para mostrar ambas gráficas una al lado de la otra</span>
@@ -1177,7 +1205,7 @@ lr.intercept_: 25321.583011776813
 </section>
 </section>
 <section id="metricas-de-evaluacion-del-modelo-de-regresion">
-<h3><strong>Métricas de evaluacion del modelo de regresión</strong><a class="headerlink" href="#metricas-de-evaluacion-del-modelo-de-regresion" title="Permalink to this heading">#</a></h3>
+<h3><strong>Métricas de evaluacion del modelo de regresión</strong><a class="headerlink" href="#metricas-de-evaluacion-del-modelo-de-regresion" title="Link to this heading">#</a></h3>
 <p>La <strong>métricas de evaluación</strong> son medidas que se utilizan para evaluar el rendimiento de un modelo de regresión. Estas métricas permiten medir qué tan bien un modelo se ajusta a los datos observados y su capacidad para hacer predicciones precisas sobre nuevos datos. La elección de la métrica adecuada es crucial, ya que cada métrica puede destacar diferentes aspectos del rendimiento del modelo, como la magnitud del error, la sensibilidad a valores atípicos, o la proporción de la varianza explicada por el modelo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1189,7 +1217,7 @@ lr.intercept_: 25321.583011776813
 </div>
 <p>Algunas métricas de evaluación del modelo son:</p>
 <section id="error-cuadratico-medio-mse-mean-squared-error">
-<h4>1. <strong>Error Cuadrático Medio (<span class="math notranslate nohighlight">\(MSE\)</span> - Mean Squared Error)</strong><a class="headerlink" href="#error-cuadratico-medio-mse-mean-squared-error" title="Permalink to this heading">#</a></h4>
+<h4>1. <strong>Error Cuadrático Medio (<span class="math notranslate nohighlight">\(MSE\)</span> - Mean Squared Error)</strong><a class="headerlink" href="#error-cuadratico-medio-mse-mean-squared-error" title="Link to this heading">#</a></h4>
 <p>El <strong>Error Cuadrático Medio (<span class="math notranslate nohighlight">\(MSE\)</span>)</strong> mide la media de los errores al cuadrado entre los valores predichos y los valores reales. Penaliza los errores grandes más que los pequeños debido a la elevación al cuadrado.</p>
 <p>Este se utiliza para evaluar qué tan bien se ajusta el modelo a los datos de entrenamiento o de prueba. Un MSE más bajo indica un mejor ajuste del modelo.</p>
 <ul class="simple">
@@ -1221,7 +1249,7 @@ Test set MSE: 49830096.8559
 </div>
 </div>
 <section id="interpretacion-de-mse">
-<h5><strong>Interpretación de MSE</strong>:<a class="headerlink" href="#interpretacion-de-mse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de MSE</strong>:<a class="headerlink" href="#interpretacion-de-mse" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Diferencia significativa entre los MSE</strong>:</p>
 <ul class="simple">
@@ -1243,7 +1271,7 @@ Test set MSE: 49830096.8559
 </ol>
 </section>
 <section id="conclusiones-de-mse">
-<h5><strong>Conclusiones de MSE</strong>:<a class="headerlink" href="#conclusiones-de-mse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de MSE</strong>:<a class="headerlink" href="#conclusiones-de-mse" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El modelo tiene un rendimiento significativamente mejor en el conjunto de entrenamiento que en el conjunto de prueba, lo que sugiere que podría estar sobreajustado.</p></li>
 <li><p>Es posible que el modelo esté capturando patrones específicos del conjunto de entrenamiento que no se replican bien en datos nuevos.</p></li>
@@ -1258,7 +1286,7 @@ Test set MSE: 49830096.8559
 </section>
 </section>
 <section id="error-absoluto-medio-mae-mean-absolute-error">
-<h4>2. <strong>Error Absoluto Medio (<span class="math notranslate nohighlight">\(MAE\)</span> - Mean Absolute Error)</strong><a class="headerlink" href="#error-absoluto-medio-mae-mean-absolute-error" title="Permalink to this heading">#</a></h4>
+<h4>2. <strong>Error Absoluto Medio (<span class="math notranslate nohighlight">\(MAE\)</span> - Mean Absolute Error)</strong><a class="headerlink" href="#error-absoluto-medio-mae-mean-absolute-error" title="Link to this heading">#</a></h4>
 <p>El <strong>Error Absoluto Medio (<span class="math notranslate nohighlight">\(MAE\)</span>)</strong> mide el promedio de las diferencias absolutas entre los valores predichos y los valores reales. No eleva al cuadrado los errores, por lo que no es tan sensible a valores atípicos.</p>
 <p>Este se utiliza cuando queremos una interpretación más directa del error medio en las mismas unidades que la variable objetivo.</p>
 <ul class="simple">
@@ -1290,7 +1318,7 @@ Test set MAE: 6286.4538
 </div>
 </div>
 <section id="interpretacion-de-mae">
-<h5><strong>Interpretación de MAE</strong>:<a class="headerlink" href="#interpretacion-de-mae" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de MAE</strong>:<a class="headerlink" href="#interpretacion-de-mae" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Diferencia entre los MAE de entrenamiento y prueba</strong>:</p>
 <ul class="simple">
@@ -1313,7 +1341,7 @@ Test set MAE: 6286.4538
 </ol>
 </section>
 <section id="conclusiones-de-mae">
-<h5><strong>Conclusiones de MAE</strong>:<a class="headerlink" href="#conclusiones-de-mae" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de MAE</strong>:<a class="headerlink" href="#conclusiones-de-mae" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>La diferencia entre los <strong>MAE</strong> sugiere que el modelo está funcionando bien en el conjunto de entrenamiento, pero tiene un peor rendimiento en el conjunto de prueba, lo que indica que podría estar sobreajustado.</p></li>
 <li><p>El modelo tiene un error promedio en las predicciones de salario de aproximadamente <strong>6,286 unidades monetarias</strong> en los datos de prueba, lo que podría ser un error significativo dependiendo del contexto del problema.</p></li>
@@ -1328,7 +1356,7 @@ Test set MAE: 6286.4538
 </section>
 </section>
 <section id="raiz-del-error-cuadratico-medio-rmse-root-mean-squared-error">
-<h4>3. <strong>Raíz del Error Cuadrático Medio (<span class="math notranslate nohighlight">\(RMSE\)</span> - Root Mean Squared Error)</strong><a class="headerlink" href="#raiz-del-error-cuadratico-medio-rmse-root-mean-squared-error" title="Permalink to this heading">#</a></h4>
+<h4>3. <strong>Raíz del Error Cuadrático Medio (<span class="math notranslate nohighlight">\(RMSE\)</span> - Root Mean Squared Error)</strong><a class="headerlink" href="#raiz-del-error-cuadratico-medio-rmse-root-mean-squared-error" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(RMSE\)</span></strong> es la raíz cuadrada del <span class="math notranslate nohighlight">\(MSE\)</span> y devuelve el error en las mismas unidades que la variable dependiente, lo que facilita la interpretación.</p>
 <p>Este al igual que el <span class="math notranslate nohighlight">\(MSE\)</span>, mide el ajuste del modelo, pero es más fácil de interpretar porque está en las mismas unidades que los datos.</p>
 <ul class="simple">
@@ -1360,7 +1388,7 @@ Test set RMSE: 7059.0436
 </div>
 </div>
 <section id="interpretacion-de-rmse">
-<h5><strong>Interpretación de RMSE</strong>:<a class="headerlink" href="#interpretacion-de-rmse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de RMSE</strong>:<a class="headerlink" href="#interpretacion-de-rmse" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Diferencia entre los RMSE de entrenamiento y prueba</strong>:</p>
 <ul class="simple">
@@ -1389,7 +1417,7 @@ Test set RMSE: 7059.0436
 </ol>
 </section>
 <section id="conclusiones-de-rmse">
-<h5><strong>Conclusiones de RMSE</strong>:<a class="headerlink" href="#conclusiones-de-rmse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de RMSE</strong>:<a class="headerlink" href="#conclusiones-de-rmse" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>RMSE</strong> más alto en el conjunto de prueba en comparación con el de entrenamiento sugiere que el modelo podría estar ligeramente <strong>sobreajustado</strong>. Aunque no hay una diferencia extremadamente grande entre los valores de RMSE, el modelo claramente tiene un mejor rendimiento en los datos de entrenamiento.</p></li>
 <li><p>La magnitud del error promedio (alrededor de <strong>7,059 unidades monetarias</strong> en el conjunto de prueba) puede considerarse significativa, dependiendo del rango de salarios en los datos. Esto indica que hay margen para mejorar las predicciones del modelo.</p></li>
@@ -1403,12 +1431,12 @@ Test set RMSE: 7059.0436
 </ul>
 </section>
 <section id="resumen-de-rmse">
-<h5><strong>Resumen de RMSE</strong>:<a class="headerlink" href="#resumen-de-rmse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de RMSE</strong>:<a class="headerlink" href="#resumen-de-rmse" title="Link to this heading">#</a></h5>
 <p>El modelo tiene un <strong>RMSE</strong> más bajo en el conjunto de entrenamiento, lo que indica un buen ajuste a esos datos, pero el mayor <strong>RMSE</strong> en el conjunto de prueba sugiere que el modelo no generaliza tan bien en datos nuevos. Aunque la diferencia no es extremadamente grande, esto sugiere que el modelo puede estar sobreajustado y hay margen para mejorar su capacidad de generalización.</p>
 </section>
 </section>
 <section id="coeficiente-de-determinacion-r-2-r-squared">
-<h4>4. <strong>Coeficiente de Determinación (<span class="math notranslate nohighlight">\(R^2\)</span> - <span class="math notranslate nohighlight">\(R\)</span>-squared)</strong><a class="headerlink" href="#coeficiente-de-determinacion-r-2-r-squared" title="Permalink to this heading">#</a></h4>
+<h4>4. <strong>Coeficiente de Determinación (<span class="math notranslate nohighlight">\(R^2\)</span> - <span class="math notranslate nohighlight">\(R\)</span>-squared)</strong><a class="headerlink" href="#coeficiente-de-determinacion-r-2-r-squared" title="Link to this heading">#</a></h4>
 <p>El <strong>coeficiente de determinación (<span class="math notranslate nohighlight">\(R^2\)</span>)</strong> mide la proporción de la varianza de la variable dependiente que es explicada por las variables independientes. Su valor está entre 0 y 1.</p>
 <p>Esto indica qué tan bien se ajusta el modelo a los datos. Un valor cercano a 1 sugiere un ajuste muy bueno.</p>
 <ul class="simple">
@@ -1459,7 +1487,7 @@ Test set R²: 0.9024
 </div>
 </div>
 <section id="interpretacion-de-r-2">
-<h5><strong>Interpretación de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#interpretacion-de-r-2" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#interpretacion-de-r-2" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Valor de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:</p>
 <ul class="simple">
@@ -1483,7 +1511,7 @@ Test set R²: 0.9024
 </ol>
 </section>
 <section id="conclusiones-de-r-2">
-<h5><strong>Conclusiones de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#conclusiones-de-r-2" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#conclusiones-de-r-2" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El alto <strong><span class="math notranslate nohighlight">\(R^2\)</span></strong> en el conjunto de entrenamiento (<strong>0.9645</strong>) indica que el modelo está bien ajustado a los datos de entrenamiento.</p></li>
 <li><p>El <strong><span class="math notranslate nohighlight">\(R^2\)</span></strong> del conjunto de prueba (<strong>0.9024</strong>) sugiere que el modelo generaliza bien en datos no vistos, aunque existe una pequeña diferencia que podría indicar un leve <strong>sobreajuste</strong>.</p></li>
@@ -1491,7 +1519,7 @@ Test set R²: 0.9024
 </ul>
 </section>
 <section id="posibles-acciones-para-mejorar-si-es-necesario-de-r-2">
-<h5><strong>Posibles acciones para mejorar (si es necesario) de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-si-es-necesario-de-r-2" title="Permalink to this heading">#</a></h5>
+<h5><strong>Posibles acciones para mejorar (si es necesario) de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-si-es-necesario-de-r-2" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Dado que el modelo ya está funcionando bien, las siguientes acciones solo serían necesarias si se busca mejorar aún más la generalización:</p>
 <ol class="arabic simple">
@@ -1503,7 +1531,7 @@ Test set R²: 0.9024
 </ul>
 </section>
 <section id="resumen-de-r-2">
-<h5><strong>Resumen de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#resumen-de-r-2" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de <span class="math notranslate nohighlight">\(R^2\)</span></strong>:<a class="headerlink" href="#resumen-de-r-2" title="Link to this heading">#</a></h5>
 <p>El modelo tiene un <strong><span class="math notranslate nohighlight">\(R^2\)</span></strong> alto en ambos conjuntos (entrenamiento y prueba), lo que indica que el modelo ajusta bien los datos y generaliza razonablemente bien a datos no vistos. La pequeña diferencia entre el <strong>R²</strong> del entrenamiento y el de prueba podría sugerir un leve sobreajuste, pero en general el modelo es sólido para predecir salarios basados en la experiencia.</p>
 <div class="tip dropdown admonition">
 <p class="admonition-title">¿Cual sería un buen score?</p>
@@ -1512,7 +1540,7 @@ Test set R²: 0.9024
 </section>
 </section>
 <section id="r-2-ajustado-adjusted-r-squared">
-<h4>5. <strong><span class="math notranslate nohighlight">\(R^2\)</span> Ajustado (Adjusted <span class="math notranslate nohighlight">\(R\)</span>-squared)</strong><a class="headerlink" href="#r-2-ajustado-adjusted-r-squared" title="Permalink to this heading">#</a></h4>
+<h4>5. <strong><span class="math notranslate nohighlight">\(R^2\)</span> Ajustado (Adjusted <span class="math notranslate nohighlight">\(R\)</span>-squared)</strong><a class="headerlink" href="#r-2-ajustado-adjusted-r-squared" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong> es una versión modificada del coeficiente de determinación <span class="math notranslate nohighlight">\(R^2\)</span> que tiene en cuenta el número de predictores en el modelo. Penaliza la adición de predictores irrelevantes que no mejoran significativamente el modelo.</p>
 <p>Es útil cuando se está comparando el rendimiento de modelos que tienen diferentes cantidades de variables independientes. Un <span class="math notranslate nohighlight">\(R^2\)</span> puede aumentar simplemente por agregar más variables, pero el <strong><span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong> solo aumenta si las nuevas variables realmente mejoran el modelo.</p>
 <ul class="simple">
@@ -1553,7 +1581,7 @@ Test set R² ajustado: 0.8781
 </div>
 </div>
 <section id="interpretacion-de-r-2-ajustado">
-<h5><strong>Interpretación de <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#interpretacion-de-r-2-ajustado" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#interpretacion-de-r-2-ajustado" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>¿Qué es el <span class="math notranslate nohighlight">\(R^2\)</span> ajustado?</strong>:</p>
 <ul class="simple">
@@ -1582,14 +1610,14 @@ Test set R² ajustado: 0.8781
 </ol>
 </section>
 <section id="conclusiones-de-r-2-ajustado">
-<h5><strong>Conclusiones de <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#conclusiones-de-r-2-ajustado" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#conclusiones-de-r-2-ajustado" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong><span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong> más bajo en el conjunto de prueba (0.8781) en comparación con el conjunto de entrenamiento (0.9629) indica que, aunque el modelo está funcionando bien, hay una pequeña diferencia en la capacidad de generalización, lo que podría indicar un <strong>leve sobreajuste</strong>.</p></li>
 <li><p>A pesar de esta diferencia, el <strong><span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong> sigue siendo relativamente alto, lo que sugiere que el modelo es razonablemente robusto y explica la mayor parte de la variabilidad en los salarios, tanto en los datos de entrenamiento como en los de prueba.</p></li>
 </ul>
 </section>
 <section id="posibles-acciones-para-mejorar-r-2-ajustado">
-<h5><strong>Posibles acciones para mejorar <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-r-2-ajustado" title="Permalink to this heading">#</a></h5>
+<h5><strong>Posibles acciones para mejorar <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-r-2-ajustado" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Si deseas mejorar la capacidad de generalización del modelo, podrías aplicar técnicas de <strong>regularización</strong> como <strong>Ridge</strong> o <strong>Lasso</strong> para reducir el sobreajuste y mejorar el rendimiento en datos no vistos.</p></li>
 <li><p>Implementar <strong>validación cruzada</strong> para tener una mejor estimación de la capacidad de generalización del modelo y asegurarse de que está optimizado para datos nuevos.</p></li>
@@ -1597,14 +1625,14 @@ Test set R² ajustado: 0.8781
 </ul>
 </section>
 <section id="resumen-de-r-2-ajustado">
-<h5><strong>Resumen de <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#resumen-de-r-2-ajustado" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de <span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong>:<a class="headerlink" href="#resumen-de-r-2-ajustado" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong><span class="math notranslate nohighlight">\(R^2\)</span> ajustado</strong> del conjunto de entrenamiento (0.9629) y el del conjunto de prueba (0.8781) muestran que el modelo tiene un buen ajuste en los datos de entrenamiento, pero podría estar ligeramente sobreajustado. A pesar de esto, el modelo sigue explicando una gran parte de la variabilidad en los salarios, incluso en los datos de prueba. Sin embargo, hay margen para mejorar la capacidad de generalización mediante regularización u otras técnicas.</p></li>
 </ul>
 </section>
 </section>
 <section id="error-medio-proporcional-absoluto-mape-mean-absolute-percentage-error">
-<h4>6. <strong>Error Medio Proporcional Absoluto (<span class="math notranslate nohighlight">\(MAPE\)</span> - Mean Absolute Percentage Error)</strong><a class="headerlink" href="#error-medio-proporcional-absoluto-mape-mean-absolute-percentage-error" title="Permalink to this heading">#</a></h4>
+<h4>6. <strong>Error Medio Proporcional Absoluto (<span class="math notranslate nohighlight">\(MAPE\)</span> - Mean Absolute Percentage Error)</strong><a class="headerlink" href="#error-medio-proporcional-absoluto-mape-mean-absolute-percentage-error" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(MAPE\)</span></strong> mide el error porcentual promedio entre los valores reales y los predichos, lo que permite interpretar el error en términos relativos.</p>
 <p>Es útil para entender el error en términos porcentuales, lo que es valioso cuando las magnitudes de los datos varían mucho.</p>
 <ul class="simple">
@@ -1639,7 +1667,7 @@ Test set MAPE: 7.7449
 </div>
 </div>
 <section id="interpretacion-del-mape">
-<h5><strong>Interpretación del MAPE</strong>:<a class="headerlink" href="#interpretacion-del-mape" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación del MAPE</strong>:<a class="headerlink" href="#interpretacion-del-mape" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>¿Qué es el MAPE?</strong>:</p>
 <ul class="simple">
@@ -1668,7 +1696,7 @@ Test set MAPE: 7.7449
 </ol>
 </section>
 <section id="conclusiones-de-mape">
-<h5><strong>Conclusiones de MAPE</strong>:<a class="headerlink" href="#conclusiones-de-mape" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de MAPE</strong>:<a class="headerlink" href="#conclusiones-de-mape" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Los valores de <strong>MAPE</strong> tanto en el conjunto de entrenamiento (<strong>6.77%</strong>) como en el conjunto de prueba (<strong>7.74%</strong>) son relativamente bajos, lo que indica que el modelo está haciendo predicciones precisas en ambas muestras.</p></li>
 <li><p>La pequeña diferencia entre los <strong>MAPE</strong> sugiere que el modelo no está sobreajustado y tiene una buena capacidad para generalizar a nuevos datos.</p></li>
@@ -1676,7 +1704,7 @@ Test set MAPE: 7.7449
 </ul>
 </section>
 <section id="posibles-acciones-para-mejorar-si-es-necesario-de-mape">
-<h5><strong>Posibles acciones para mejorar (si es necesario) de MAPE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-si-es-necesario-de-mape" title="Permalink to this heading">#</a></h5>
+<h5><strong>Posibles acciones para mejorar (si es necesario) de MAPE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-si-es-necesario-de-mape" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Aunque los resultados son buenos, si se desea mejorar aún más la precisión del modelo, se podrían explorar las siguientes acciones:</p>
 <ol class="arabic simple">
@@ -1688,14 +1716,14 @@ Test set MAPE: 7.7449
 </ul>
 </section>
 <section id="resumen-de-mape">
-<h5><strong>Resumen de MAPE</strong>:<a class="headerlink" href="#resumen-de-mape" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de MAPE</strong>:<a class="headerlink" href="#resumen-de-mape" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>MAPE</strong> en el conjunto de entrenamiento es <strong>6.77%</strong>, mientras que en el conjunto de prueba es <strong>7.74%</strong>. Estos valores sugieren que el modelo tiene un buen rendimiento en ambas muestras, con una ligera disminución de precisión en los datos de prueba. En general, el modelo es robusto y las predicciones de salario basadas en la experiencia son razonablemente precisas, con un error porcentual medio bajo.</p></li>
 </ul>
 </section>
 </section>
 <section id="error-cuadratico-medio-de-logaritmo-msle-mean-squared-logarithmic-error">
-<h4>7. <strong>Error Cuadrático Medio de Logaritmo (<span class="math notranslate nohighlight">\(MSLE\)</span> - Mean Squared Logarithmic Error)</strong><a class="headerlink" href="#error-cuadratico-medio-de-logaritmo-msle-mean-squared-logarithmic-error" title="Permalink to this heading">#</a></h4>
+<h4>7. <strong>Error Cuadrático Medio de Logaritmo (<span class="math notranslate nohighlight">\(MSLE\)</span> - Mean Squared Logarithmic Error)</strong><a class="headerlink" href="#error-cuadratico-medio-de-logaritmo-msle-mean-squared-logarithmic-error" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(MSLE\)</span></strong> es una variante del <span class="math notranslate nohighlight">\(MSE\)</span> que utiliza los logaritmos de los valores reales y predichos, en lugar de los valores originales.</p>
 <p>Este se utiliza cuando se quiere penalizar más los errores de predicción en valores pequeños que en valores grandes.</p>
 <ul class="simple">
@@ -1730,7 +1758,7 @@ Test set MSLE: 0.0082
 </div>
 </div>
 <section id="interpretacion-de-msle">
-<h5><strong>Interpretación de MSLE</strong>:<a class="headerlink" href="#interpretacion-de-msle" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de MSLE</strong>:<a class="headerlink" href="#interpretacion-de-msle" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>¿Qué es el MSLE?</strong>:</p>
 <ul class="simple">
@@ -1759,14 +1787,14 @@ Test set MSLE: 0.0082
 </ol>
 </section>
 <section id="conclusiones-de-msle">
-<h5><strong>Conclusiones de MSLE</strong>:<a class="headerlink" href="#conclusiones-de-msle" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de MSLE</strong>:<a class="headerlink" href="#conclusiones-de-msle" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Los valores bajos de <strong>MSLE</strong> en ambos conjuntos (entrenamiento y prueba) sugieren que el modelo es capaz de predecir los valores con un alto grado de precisión en términos relativos, incluso cuando se consideran errores grandes.</p></li>
 <li><p>La pequeña diferencia entre el <strong>MSLE</strong> de entrenamiento y prueba sugiere que el modelo tiene una <strong>buena capacidad de generalización</strong> y está funcionando bien tanto en los datos de entrenamiento como en los datos no vistos.</p></li>
 </ul>
 </section>
 <section id="posibles-acciones-para-mejorar-de-msle">
-<h5><strong>Posibles acciones para mejorar de MSLE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-de-msle" title="Permalink to this heading">#</a></h5>
+<h5><strong>Posibles acciones para mejorar de MSLE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-de-msle" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Aunque los resultados son buenos, si se busca mejorar aún más la precisión del modelo, se pueden considerar las siguientes acciones:</p>
 <ol class="arabic simple">
@@ -1778,14 +1806,14 @@ Test set MSLE: 0.0082
 </ul>
 </section>
 <section id="resumen-de-msle">
-<h5><strong>Resumen de MSLE</strong>:<a class="headerlink" href="#resumen-de-msle" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de MSLE</strong>:<a class="headerlink" href="#resumen-de-msle" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>MSLE</strong> en el conjunto de entrenamiento es <strong>0.0075</strong>, mientras que en el conjunto de prueba es <strong>0.0082</strong>. Estos valores bajos sugieren que el modelo está haciendo predicciones precisas tanto en los datos de entrenamiento como en los de prueba. La diferencia mínima entre ambos valores indica una <strong>buena capacidad de generalización</strong>, y el modelo es sólido en cuanto a su rendimiento en datos no vistos.</p></li>
 </ul>
 </section>
 </section>
 <section id="error-relativo-absoluto-rae-relative-absolute-error">
-<h4>8. <strong>Error Relativo Absoluto (<span class="math notranslate nohighlight">\(RAE\)</span> - Relative Absolute Error)</strong><a class="headerlink" href="#error-relativo-absoluto-rae-relative-absolute-error" title="Permalink to this heading">#</a></h4>
+<h4>8. <strong>Error Relativo Absoluto (<span class="math notranslate nohighlight">\(RAE\)</span> - Relative Absolute Error)</strong><a class="headerlink" href="#error-relativo-absoluto-rae-relative-absolute-error" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(RAE\)</span></strong> compara el error absoluto del modelo con el error absoluto de un modelo de referencia, que usualmente es el modelo que predice el valor medio de la variable dependiente.</p>
 <p>Este evalúa el rendimiento relativo del modelo comparado con una solución trivial.</p>
 <ul class="simple">
@@ -1821,7 +1849,7 @@ Test set RAE: 0.3139
 </div>
 </div>
 <section id="interpretacion-de-rae">
-<h5><strong>Interpretación de RAE</strong>:<a class="headerlink" href="#interpretacion-de-rae" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de RAE</strong>:<a class="headerlink" href="#interpretacion-de-rae" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>¿Qué es el RAE?</strong>:</p>
 <ul class="simple">
@@ -1849,7 +1877,7 @@ Test set RAE: 0.3139
 </ol>
 </section>
 <section id="conclusiones-de-rae">
-<h5><strong>Conclusiones de RAE</strong>:<a class="headerlink" href="#conclusiones-de-rae" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de RAE</strong>:<a class="headerlink" href="#conclusiones-de-rae" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>RAE</strong> del conjunto de entrenamiento es bajo (<strong>0.1684</strong>), lo que indica que el modelo está funcionando significativamente mejor que un modelo que predijera simplemente la media de los valores reales.</p></li>
 <li><p>El <strong>RAE</strong> del conjunto de prueba es mayor (<strong>0.3139</strong>), lo que sugiere que el modelo no generaliza tan bien a los nuevos datos como lo hace en el conjunto de entrenamiento. A pesar de esto, el modelo sigue teniendo un rendimiento relativamente bueno en comparación con un modelo base.</p></li>
@@ -1857,7 +1885,7 @@ Test set RAE: 0.3139
 </ul>
 </section>
 <section id="posibles-acciones-para-mejorar-de-rae">
-<h5><strong>Posibles acciones para mejorar de RAE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-de-rae" title="Permalink to this heading">#</a></h5>
+<h5><strong>Posibles acciones para mejorar de RAE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-de-rae" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Aplicar regularización</strong>: Utilizar técnicas de regularización como <strong>Ridge</strong> o <strong>Lasso</strong> para reducir el sobreajuste y mejorar la capacidad de generalización del modelo en los datos de prueba.</p></li>
 <li><p><strong>Validación cruzada</strong>: Implementar validación cruzada para obtener una estimación más robusta del rendimiento del modelo en diferentes particiones de los datos.</p></li>
@@ -1865,7 +1893,7 @@ Test set RAE: 0.3139
 </ol>
 </section>
 <section id="resumen-de-rae">
-<h5><strong>Resumen de RAE</strong>:<a class="headerlink" href="#resumen-de-rae" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de RAE</strong>:<a class="headerlink" href="#resumen-de-rae" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>RAE</strong> en el conjunto de entrenamiento es <strong>0.1684</strong>, lo que sugiere un buen ajuste a los datos de entrenamiento, mientras que el <strong>RAE</strong> en el conjunto de prueba es <strong>0.3139</strong>, lo que indica un rendimiento un poco peor en datos no vistos.</p></li>
 <li><p>La diferencia entre estos valores sugiere que el modelo está capturando patrones específicos de los datos de entrenamiento y no generaliza tan bien en datos nuevos, lo que podría indicar un <strong>leve sobreajuste</strong>. Para mejorar, se podrían aplicar técnicas de regularización o validación cruzada.</p></li>
@@ -1873,7 +1901,7 @@ Test set RAE: 0.3139
 </section>
 </section>
 <section id="error-cuadratico-relativo-rse-relative-squared-error">
-<h4>9. <strong>Error Cuadrático Relativo (<span class="math notranslate nohighlight">\(RSE\)</span> - Relative Squared Error)</strong><a class="headerlink" href="#error-cuadratico-relativo-rse-relative-squared-error" title="Permalink to this heading">#</a></h4>
+<h4>9. <strong>Error Cuadrático Relativo (<span class="math notranslate nohighlight">\(RSE\)</span> - Relative Squared Error)</strong><a class="headerlink" href="#error-cuadratico-relativo-rse-relative-squared-error" title="Link to this heading">#</a></h4>
 <p>El <strong><span class="math notranslate nohighlight">\(RSE\)</span></strong> compara el error cuadrático del modelo con el error cuadrático de un modelo de referencia (generalmente el promedio de los valores reales).</p>
 <p>Similar al <span class="math notranslate nohighlight">\(RAE\)</span>, compara el rendimiento del modelo frente a un predictor básico.</p>
 <ul class="simple">
@@ -1909,7 +1937,7 @@ Test set RSE: 0.0976
 </div>
 </div>
 <section id="interpretacion-de-rse">
-<h5><strong>Interpretación de RSE</strong>:<a class="headerlink" href="#interpretacion-de-rse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Interpretación de RSE</strong>:<a class="headerlink" href="#interpretacion-de-rse" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>¿Qué es el RSE?</strong>:</p>
 <ul class="simple">
@@ -1938,7 +1966,7 @@ Test set RSE: 0.0976
 </ol>
 </section>
 <section id="conclusiones-de-rse">
-<h5><strong>Conclusiones de RSE</strong>:<a class="headerlink" href="#conclusiones-de-rse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusiones de RSE</strong>:<a class="headerlink" href="#conclusiones-de-rse" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>RSE</strong> del conjunto de entrenamiento es muy bajo (<strong>0.0355</strong>), lo que indica que el modelo tiene un rendimiento significativamente mejor que un modelo que predice la media de los salarios en esos datos.</p></li>
 <li><p>El <strong>RSE</strong> del conjunto de prueba es mayor (<strong>0.0976</strong>), pero sigue siendo bajo, lo que sugiere que el modelo sigue siendo mejor que un modelo base en los datos de prueba, aunque con menor precisión en comparación con los datos de entrenamiento.</p></li>
@@ -1946,7 +1974,7 @@ Test set RSE: 0.0976
 </ul>
 </section>
 <section id="posibles-acciones-para-mejorar-de-rse">
-<h5><strong>Posibles acciones para mejorar de RSE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-de-rse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Posibles acciones para mejorar de RSE</strong>:<a class="headerlink" href="#posibles-acciones-para-mejorar-de-rse" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Aplicar regularización</strong>: Utilizar técnicas de regularización como <strong>Ridge</strong> o <strong>Lasso</strong> podría ayudar a reducir el sobreajuste y mejorar la capacidad del modelo para generalizar a nuevos datos.</p></li>
 <li><p><strong>Validación cruzada</strong>: Implementar validación cruzada para evaluar mejor el rendimiento del modelo y optimizar su capacidad de generalización en diferentes subconjuntos de los datos.</p></li>
@@ -1954,7 +1982,7 @@ Test set RSE: 0.0976
 </ol>
 </section>
 <section id="resumen-de-rse">
-<h5><strong>Resumen de RSE</strong>:<a class="headerlink" href="#resumen-de-rse" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resumen de RSE</strong>:<a class="headerlink" href="#resumen-de-rse" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>El <strong>RSE</strong> en el conjunto de entrenamiento es <strong>0.0355</strong>, lo que sugiere que el modelo se ajusta muy bien a los datos de entrenamiento. El <strong>RSE</strong> en el conjunto de prueba es <strong>0.0976</strong>, lo que indica que el modelo tiene un buen rendimiento en los datos no vistos, pero con una precisión algo menor.</p></li>
 <li><p>La diferencia entre los <strong>RSE</strong> sugiere que el modelo podría estar <strong>ligeramente sobreajustado</strong>, pero sigue siendo significativamente mejor que un modelo base que predice simplemente la media de los valores de salario.</p></li>
@@ -1963,7 +1991,7 @@ Test set RSE: 0.0976
 </section>
 </section>
 <section id="regresion-lineal-con-la-libreria-statsmodels">
-<h4><strong>Regresión Lineal con la librería Statsmodels</strong><a class="headerlink" href="#regresion-lineal-con-la-libreria-statsmodels" title="Permalink to this heading">#</a></h4>
+<h4><strong>Regresión Lineal con la librería Statsmodels</strong><a class="headerlink" href="#regresion-lineal-con-la-libreria-statsmodels" title="Link to this heading">#</a></h4>
 <p>La implementación de <strong>regresión lineal</strong> en <strong>Statsmodels</strong> es más completa que la de <strong>Scikit-learn</strong>, ya que, además de ajustar el modelo, permite calcular pruebas estadísticas y realizar análisis necesarios para verificar que se cumplen las condiciones sobre las que se basa este tipo de modelos. Esto la convierte en una herramienta más robusta para el análisis de regresión.</p>
 <div class="note admonition">
 <p class="admonition-title">Ventajas de Statsmodels</p>
@@ -1973,7 +2001,7 @@ Test set RSE: 0.0976
 </ul>
 </div>
 <section id="formas-de-entrenar-un-modelo-de-regresion-en-statsmodels">
-<h5><strong>Formas de entrenar un modelo de regresión en Statsmodels</strong>:<a class="headerlink" href="#formas-de-entrenar-un-modelo-de-regresion-en-statsmodels" title="Permalink to this heading">#</a></h5>
+<h5><strong>Formas de entrenar un modelo de regresión en Statsmodels</strong>:<a class="headerlink" href="#formas-de-entrenar-un-modelo-de-regresion-en-statsmodels" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Indicando la fórmula del modelo</strong>:</p>
 <ul class="simple">
@@ -2077,7 +2105,7 @@ Notes:
 </div>
 </section>
 <section id="resultados-de-la-regresion-lineal-ols">
-<h5><strong>Resultados de la Regresión Lineal (OLS)</strong><a class="headerlink" href="#resultados-de-la-regresion-lineal-ols" title="Permalink to this heading">#</a></h5>
+<h5><strong>Resultados de la Regresión Lineal (OLS)</strong><a class="headerlink" href="#resultados-de-la-regresion-lineal-ols" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Estadísticos del Modelo</strong>:</p></li>
 </ol>
@@ -2175,27 +2203,27 @@ Notes:
 </ul>
 </section>
 <section id="comparacion-con-scikit-learn">
-<h5><strong>Comparación con Scikit-learn</strong><a class="headerlink" href="#comparacion-con-scikit-learn" title="Permalink to this heading">#</a></h5>
+<h5><strong>Comparación con Scikit-learn</strong><a class="headerlink" href="#comparacion-con-scikit-learn" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p><strong>Scikit-learn</strong> está más orientado a la predicción y es ideal para construir modelos de regresión de forma rápida y eficiente, sin tener que preocuparse por el análisis estadístico detallado.</p></li>
 <li><p><strong>Statsmodels</strong>, en cambio, está más orientado al análisis estadístico completo, proporcionando una visión detallada del ajuste del modelo y permitiendo realizar pruebas estadísticas y análisis de residuales de manera sencilla.</p></li>
 </ul>
 </section>
 <section id="conclusion">
-<h5><strong>Conclusión</strong><a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h5>
+<h5><strong>Conclusión</strong><a class="headerlink" href="#conclusion" title="Link to this heading">#</a></h5>
 <p>Si solo necesitas ajustar un modelo de regresión lineal rápidamente para hacer predicciones, <strong>Scikit-learn</strong> es una excelente opción. Sin embargo, si necesitas realizar un análisis estadístico completo del modelo, incluyendo pruebas de significancia y validación de los supuestos del modelo, <strong>Statsmodels</strong> es una herramienta más adecuada.</p>
 </section>
 </section>
 </section>
 <section id="regresion-lineal-multiple">
-<h3><strong>Regresión lineal multiple</strong><a class="headerlink" href="#regresion-lineal-multiple" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión lineal multiple</strong><a class="headerlink" href="#regresion-lineal-multiple" title="Link to this heading">#</a></h3>
 <p>En este ejemplo, utilizaremos el conjunto de datos <code class="docutils literal notranslate"><span class="pre">California</span> <span class="pre">Housing</span> <span class="pre">Prices.csv</span></code>, que consta de 20.640 instancias. Cada instancia representa una unidad residencial en el estado de California y contiene 10 atributos, incluyendo la variable objetivo. Los atributos se definen de la siguiente manera:</p>
 <ul class="simple">
 <li><p><strong>Objetivo General</strong>:
 Desarrollar un modelo de predicción que estime el <strong>valor medio de las viviendas</strong> en diferentes áreas de California, utilizando características socioeconómicas y geográficas, con el fin de proporcionar una herramienta que apoye la toma de decisiones en el sector inmobiliario y facilite la planificación urbana.</p></li>
 </ul>
 <section id="importar-las-librerias-necesarias">
-<h4>1. <strong>Importar las librerías necesarias</strong><a class="headerlink" href="#importar-las-librerias-necesarias" title="Permalink to this heading">#</a></h4>
+<h4>1. <strong>Importar las librerías necesarias</strong><a class="headerlink" href="#importar-las-librerias-necesarias" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -2212,7 +2240,7 @@ Desarrollar un modelo de predicción que estime el <strong>valor medio de las vi
 </div>
 </section>
 <section id="lectura-de-los-datos">
-<h4>2. <strong>Lectura de los datos</strong><a class="headerlink" href="#lectura-de-los-datos" title="Permalink to this heading">#</a></h4>
+<h4>2. <strong>Lectura de los datos</strong><a class="headerlink" href="#lectura-de-los-datos" title="Link to this heading">#</a></h4>
 <p>El conjunto de datos de <em>Boston Housing Price.</em> Puede ver que estamos especificando los nombres cortos para cada atributo para que podamos referenciarlos claramente más adelante. También puede ver que los atributos están delimitados por espacios en blanco en lugar de comas en este archivo e indicamos esto a la función <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> a través del argumento <code class="docutils literal notranslate"><span class="pre">delim.whitespace</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2489,7 +2517,7 @@ memory usage: 1.6+ MB
 </div>
 </section>
 <section id="id1">
-<h4>3. <strong>Datos faltantes o NANs</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h4>3. <strong>Datos faltantes o NANs</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">missing_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -2583,7 +2611,7 @@ memory usage: 1.6+ MB
 </div>
 </section>
 <section id="resumen-estadistico">
-<h4>4. <strong>Resumen estadístico.</strong><a class="headerlink" href="#resumen-estadistico" title="Permalink to this heading">#</a></h4>
+<h4>4. <strong>Resumen estadístico.</strong><a class="headerlink" href="#resumen-estadistico" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Variable de objetivo con las predictoras (numéricas)</p></li>
 </ul>
@@ -2765,7 +2793,7 @@ ISLAND                5      0.0002
 </div>
 </section>
 <section id="visualizacion-del-conjunto-de-datos">
-<h4>5. <strong>Visualización del conjunto de datos</strong><a class="headerlink" href="#visualizacion-del-conjunto-de-datos" title="Permalink to this heading">#</a></h4>
+<h4>5. <strong>Visualización del conjunto de datos</strong><a class="headerlink" href="#visualizacion-del-conjunto-de-datos" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Variables numéricas</p></li>
 </ul>
@@ -2917,7 +2945,7 @@ Curtosis: 0.33
 </div>
 </section>
 <section id="correlaciones">
-<h4>6. <strong>Correlaciones</strong><a class="headerlink" href="#correlaciones" title="Permalink to this heading">#</a></h4>
+<h4>6. <strong>Correlaciones</strong><a class="headerlink" href="#correlaciones" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Es importante garantizar la ausencia de relación entre atríbutos, por tal razón lo utilizaremos la función <code class="docutils literal notranslate"><span class="pre">corr(method='spearman')</span></code> para verificar que se cumpla esta condición.</p></li>
 </ul>
@@ -3101,7 +3129,7 @@ Curtosis: 0.33
 </div>
 </section>
 <section id="construccion-del-modelo-de-regresion">
-<h4>7. <strong>Construcción del modelo de regresión</strong><a class="headerlink" href="#construccion-del-modelo-de-regresion" title="Permalink to this heading">#</a></h4>
+<h4>7. <strong>Construcción del modelo de regresión</strong><a class="headerlink" href="#construccion-del-modelo-de-regresion" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convertir la variable categórica &#39;ocean_proximity&#39; en variables dummy</span>
@@ -3171,7 +3199,7 @@ Test set score: 0.6257
 </section>
 </section>
 <section id="regresion-ridge">
-<h3><strong>Regresión Ridge</strong><a class="headerlink" href="#regresion-ridge" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión Ridge</strong><a class="headerlink" href="#regresion-ridge" title="Link to this heading">#</a></h3>
 <p>La <strong>regularización Ridge</strong> penaliza la suma de los coeficientes elevados al cuadrado, es decir, <span class="math notranslate nohighlight">\(||\beta||_2^2 = \sum_{j=1}^{p} \beta_j^2 \)</span>. Esta penalización, conocida como <span class="math notranslate nohighlight">\(L^{2}\)</span>, tiene el efecto de reducir de forma proporcional el valor de todos los coeficientes del modelo, sin llevarlos a cero. El grado de penalización es controlado por el hiperparámetro <span class="math notranslate nohighlight">\(\lambda\)</span>. Cuando <span class="math notranslate nohighlight">\(\lambda = 0\)</span>, no hay penalización y el modelo es equivalente a un ajuste de mínimos cuadrados ordinarios (OLS). A medida que <span class="math notranslate nohighlight">\(\lambda\)</span> aumenta, la penalización se incrementa y el valor de los coeficientes disminuye.</p>
 <p>La función de coste para el modelo Ridge es:</p>
 <div class="math notranslate nohighlight">
@@ -3195,7 +3223,7 @@ Test set score: 0.6257
 </div>
 <p>En resumen, la regularización Ridge es una técnica eficaz para mejorar la generalización de los modelos lineales, especialmente en situaciones donde hay muchos predictores en relación con el número de observaciones.</p>
 <section id="construccion-del-modelo-rigde">
-<h4><strong>Construcción del modelo Rigde</strong><a class="headerlink" href="#construccion-del-modelo-rigde" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo Rigde</strong><a class="headerlink" href="#construccion-del-modelo-rigde" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importar la libreria  </span>
@@ -3310,7 +3338,7 @@ Test set score: 0.6274
 </section>
 </section>
 <section id="regresion-lasso">
-<h3><strong>Regresión Lasso</strong><a class="headerlink" href="#regresion-lasso" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión Lasso</strong><a class="headerlink" href="#regresion-lasso" title="Link to this heading">#</a></h3>
 <p>La <strong>regularización Lasso</strong> penaliza la suma del valor absoluto de los coeficientes de regresión, es decir, <span class="math notranslate nohighlight">\(||\beta||_1 = \sum_{j=1}^{p} |\beta_j|\)</span>. Esta penalización, conocida como <span class="math notranslate nohighlight">\(L^1\)</span>, tiene el efecto de forzar a que algunos coeficientes de los predictores sean exactamente cero. Esto permite al método Lasso excluir del modelo los predictores menos relevantes, logrando así una forma de selección de variables.</p>
 <p>Al igual que en Ridge, el grado de penalización está controlado por el hiperparámetro <span class="math notranslate nohighlight">\(\lambda\)</span>. Cuando <span class="math notranslate nohighlight">\(\lambda = 0\)</span>, la penalización es nula y el modelo es equivalente a un ajuste de mínimos cuadrados ordinarios (OLS). A medida que <span class="math notranslate nohighlight">\(\lambda\)</span> aumenta, la penalización se intensifica, lo que lleva a que más coeficientes se reduzcan a cero, excluyendo así más predictores del modelo.</p>
 <p>La función de coste para el modelo Lasso es:</p>
@@ -3335,7 +3363,7 @@ Test set score: 0.6274
 </div>
 <p>En resumen, la regularización Lasso es útil para crear modelos parsimoniosos, seleccionando automáticamente las variables más relevantes y excluyendo las menos significativas.</p>
 <section id="construccion-del-modelo-lasso">
-<h4><strong>Construcción del modelo Lasso</strong><a class="headerlink" href="#construccion-del-modelo-lasso" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo Lasso</strong><a class="headerlink" href="#construccion-del-modelo-lasso" title="Link to this heading">#</a></h4>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importar la libreria  </span>
@@ -3470,10 +3498,10 @@ Número de características utilizadas: 12
 </section>
 </section>
 <section id="regresion-por-k-vecinos">
-<h3><strong>Regresión por <span class="math notranslate nohighlight">\(k\)</span>-vecinos</strong><a class="headerlink" href="#regresion-por-k-vecinos" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión por <span class="math notranslate nohighlight">\(k\)</span>-vecinos</strong><a class="headerlink" href="#regresion-por-k-vecinos" title="Link to this heading">#</a></h3>
 <p>La <strong>regresión de k vecinos más cercanos</strong> (K-Nearest Neighbors Regression, KNN Regression) es un método de aprendizaje supervisado que se utiliza para predecir valores continuos. A diferencia de los modelos lineales, no asume una relación específica entre las variables de entrada y la salida. En su lugar, basa la predicción en la similitud entre los puntos de datos.</p>
 <section id="como-funciona-knn-regression">
-<h4><strong>¿Cómo funciona KNN Regression?</strong><a class="headerlink" href="#como-funciona-knn-regression" title="Permalink to this heading">#</a></h4>
+<h4><strong>¿Cómo funciona KNN Regression?</strong><a class="headerlink" href="#como-funciona-knn-regression" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Definir el número de vecinos (k):</strong> El usuario elige un valor de <span class="math notranslate nohighlight">\(k\)</span>, que representa el número de vecinos más cercanos que se utilizarán para hacer la predicción.</p></li>
 <li><p><strong>Calcular la distancia:</strong> Para un nuevo punto, se calcula la distancia entre este punto y todos los puntos en el conjunto de entrenamiento. Las distancias comunes utilizadas son la distancia euclidiana o la distancia Manhattan.</p></li>
@@ -3527,7 +3555,7 @@ Número de características utilizadas: 12
 </div>
 </section>
 <section id="consideraciones-al-usar-knn-regression">
-<h4><strong>Consideraciones al usar KNN Regression</strong><a class="headerlink" href="#consideraciones-al-usar-knn-regression" title="Permalink to this heading">#</a></h4>
+<h4><strong>Consideraciones al usar KNN Regression</strong><a class="headerlink" href="#consideraciones-al-usar-knn-regression" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Estandarizar las características:</strong> Para que todas las variables tengan la misma importancia en el cálculo de distancias.</p></li>
 <li><p><strong>Optimizar el valor de <span class="math notranslate nohighlight">\(k\)</span>:</strong> Utilizar técnicas de validación cruzada para encontrar el mejor valor de <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
@@ -3536,7 +3564,7 @@ Número de características utilizadas: 12
 <p>La regresión de KNN es una técnica útil para problemas donde la relación entre las variables no es lineal y se necesita un enfoque no paramétrico. Sin embargo, su rendimiento puede disminuir con conjuntos de datos muy grandes o con muchas dimensiones.</p>
 </section>
 <section id="construccion-del-modelo-knn">
-<h4><strong>Construcción del modelo KNN</strong><a class="headerlink" href="#construccion-del-modelo-knn" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo KNN</strong><a class="headerlink" href="#construccion-del-modelo-knn" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Como ya tenemos seleccionados los datos de entrenamiento y de prueba, además, aplicado imputacion de datos con la variable dummy y estandarizado, es necesario <strong>encontrar el factor <span class="math notranslate nohighlight">\(k\)</span></strong> que genere los mejores resultados para el algoritmo. Una de las formas de encontrar este factor <span class="math notranslate nohighlight">\(k\)</span> es <strong>realizar una prueba con varios valores y medir los resultados porcentuales</strong>. Será necesario agotar un gran número de posibilidades de <span class="math notranslate nohighlight">\(k\)</span></p></li>
 </ul>
@@ -3686,7 +3714,7 @@ Test set score: 0.7170
 </section>
 </section>
 <section id="regresion-con-support-vector-machine-svr">
-<h3><strong>Regresión con Support Vector Machine (SVR)</strong><a class="headerlink" href="#regresion-con-support-vector-machine-svr" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión con Support Vector Machine (SVR)</strong><a class="headerlink" href="#regresion-con-support-vector-machine-svr" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Las <strong>Máquinas de Soporte Vectorial</strong> (SVM) se pueden utilizar tanto para regresiones lineales como no lineales; en este contexto, se denominan <strong>SVR</strong> (Support Vector Regression).</p></li>
 <li><p>A diferencia de las SVM tradicionales, que buscan ajustar el mayor corredor (o calle) posible entre dos clases para maximizar el margen, las SVR intentan mantener la mayor cantidad de observaciones del conjunto de datos dentro de un corredor alrededor de la recta de regresión, limitando el margen máximo de error.</p></li>
@@ -3694,14 +3722,14 @@ Test set score: 0.7170
 </ul>
 <p><img alt="SVR" src="_images/svr1.png" /></p>
 <section id="como-funciona-la-svr">
-<h4><strong>¿Cómo funciona la SVR?</strong><a class="headerlink" href="#como-funciona-la-svr" title="Permalink to this heading">#</a></h4>
+<h4><strong>¿Cómo funciona la SVR?</strong><a class="headerlink" href="#como-funciona-la-svr" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>La SVR realiza una regresión en un espacio de dimensión superior, conocido como espacio de características. En este espacio, el problema puede ser más fácil de resolver debido a que las relaciones no lineales se pueden transformar en lineales.</p></li>
 <li><p>Al construir una SVR, podemos imaginar que cada punto de datos del conjunto de entrenamiento representa una dimensión en este espacio de mayor dimensión. Al evaluar el núcleo (o <strong>kernel</strong>) entre un punto de prueba y cada punto del conjunto de entrenamiento, se obtiene un vector <strong>k</strong>, que es la representación del punto de prueba en el espacio transformado.</p></li>
 </ul>
 </section>
 <section id="funcion-de-decision">
-<h4><strong>Función de Decisión</strong><a class="headerlink" href="#funcion-de-decision" title="Permalink to this heading">#</a></h4>
+<h4><strong>Función de Decisión</strong><a class="headerlink" href="#funcion-de-decision" title="Link to this heading">#</a></h4>
 <p>La función de decisión para la SVR se define como:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -3715,7 +3743,7 @@ f(x) = \sum_{i=1}^{N} (\alpha_i - \alpha_i^*) K(x_i, x) + b
 </ul>
 </section>
 <section id="definicion-del-nucleo">
-<h4><strong>Definición del Núcleo</strong><a class="headerlink" href="#definicion-del-nucleo" title="Permalink to this heading">#</a></h4>
+<h4><strong>Definición del Núcleo</strong><a class="headerlink" href="#definicion-del-nucleo" title="Link to this heading">#</a></h4>
 <p>El núcleo <span class="math notranslate nohighlight">\(K(x_i, x)\)</span> permite transformar los datos al espacio de mayor dimensión, y puede ser de diferentes tipos:</p>
 <ul class="simple">
 <li><p><strong>Lineal</strong>: <span class="math notranslate nohighlight">\(K(x_i, x) = x_i \cdot x\)</span></p></li>
@@ -3727,7 +3755,7 @@ f(x) = \sum_{i=1}^{N} (\alpha_i - \alpha_i^*) K(x_i, x) + b
 <p><img alt="Kernel" src="_images/kernel.png" /></p>
 </section>
 <section id="construccion-de-un-modelo-de-svr">
-<h4><strong>Construcción de un Modelo de SVR</strong><a class="headerlink" href="#construccion-de-un-modelo-de-svr" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción de un Modelo de SVR</strong><a class="headerlink" href="#construccion-de-un-modelo-de-svr" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Definir el conjunto de entrenamiento</strong> con pares de datos <span class="math notranslate nohighlight">\((x_i, y_i)\)</span>, donde <span class="math notranslate nohighlight">\(x_i\)</span> son las características y <span class="math notranslate nohighlight">\(y_i\)</span> son los valores objetivo.</p></li>
 <li><p><strong>Elegir un núcleo</strong> y sus parámetros, además de realizar la regularización para controlar el sobreajuste.</p></li>
@@ -3744,7 +3772,7 @@ M_{i,j} = \exp \left( \sum_{k} \theta_k |x_i^k - x_j^k|^2 \right) + \epsilon \de
 <p>En este enlace puedes encontrar la documentación de <a class="reference external" href="https://scikit-learn.org/stable/api/sklearn.svm.html#module-sklearn.svm">SVR</a>.</p>
 </section>
 <section id="resumen">
-<h4><strong>Resumen</strong><a class="headerlink" href="#resumen" title="Permalink to this heading">#</a></h4>
+<h4><strong>Resumen</strong><a class="headerlink" href="#resumen" title="Link to this heading">#</a></h4>
 <p>Para simplificar, la diferencia clave entre la <strong>regresión lineal</strong> y la <strong>SVR</strong> es el objetivo de optimización:</p>
 <ul class="simple">
 <li><p>En la <strong>regresión lineal</strong>, se minimiza el error cuadrático medio entre las predicciones y los datos reales.</p></li>
@@ -3753,7 +3781,7 @@ M_{i,j} = \exp \left( \sum_{k} \theta_k |x_i^k - x_j^k|^2 \right) + \epsilon \de
 <p>El modelo optimiza para que los errores estén lo más cerca posible de cero, sin superar el margen especificado por <span class="math notranslate nohighlight">\(\epsilon\)</span>.</p>
 </section>
 <section id="construccion-del-modelo-de-svr">
-<h4><strong>Construcción del modelo de SVR</strong><a class="headerlink" href="#construccion-del-modelo-de-svr" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo de SVR</strong><a class="headerlink" href="#construccion-del-modelo-de-svr" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">SVR</span></code> - Epsilon-Support Vector Regression</strong></p></li>
 </ol>
@@ -3931,11 +3959,11 @@ Test set score: 0.6119
 </section>
 </section>
 <section id="evaluacion-de-los-modelos">
-<h3><strong>Evaluación de los módelos</strong><a class="headerlink" href="#evaluacion-de-los-modelos" title="Permalink to this heading">#</a></h3>
+<h3><strong>Evaluación de los módelos</strong><a class="headerlink" href="#evaluacion-de-los-modelos" title="Link to this heading">#</a></h3>
 <p>Después de discutir algunos modelos del aprendizaje supervisado y los distintos algoritmos utilizados, pasaremos a abordar la evaluación de modelos y la selección de hiperparámetros. Nos centraremos en los modelos supervisados, particularmente en los problemas de regresión, dado que la evaluación en el aprendizaje no supervisado suele ser más cualitativa y subjetiva.</p>
 <p>Una vez que se han definido <strong>las métricas de evaluación</strong>, el siguiente paso es garantizar que el modelo sea capaz de generalizar a datos nuevos. Para ello, se utilizan técnicas como la <strong>validación cruzada</strong> y la <strong>selección de hiperparámetros</strong>.</p>
 <section id="validacion-cruzada-cross-validation">
-<h4><strong>Validación cruzada (Cross-Validation)</strong><a class="headerlink" href="#validacion-cruzada-cross-validation" title="Permalink to this heading">#</a></h4>
+<h4><strong>Validación cruzada (Cross-Validation)</strong><a class="headerlink" href="#validacion-cruzada-cross-validation" title="Link to this heading">#</a></h4>
 <p>La <strong>validación cruzada</strong> es un método estadístico utilizado para evaluar el rendimiento de un modelo de manera más estable y exhaustiva que simplemente dividiendo los datos en un conjunto de entrenamiento y otro de prueba. En la validación cruzada, los datos se dividen varias veces y se entrenan múltiples modelos para obtener una mejor estimación de la capacidad de generalización del modelo.</p>
 <p>La forma más común de validación cruzada es la <strong>validación cruzada k-fold</strong>, donde <span class="math notranslate nohighlight">\(k\)</span> es un número especificado por el usuario, típicamente 5 o 10.</p>
 <div class="note admonition">
@@ -3964,7 +3992,7 @@ Test set score: 0.6119
 <p>La validación cruzada es una herramienta fundamental en el aprendizaje automático para evaluar de manera confiable el rendimiento de un modelo y evitar problemas de sobreajuste.</p>
 </div>
 <section id="tipos-de-validacion-cruzada">
-<h5><strong>Tipos de validación cruzada</strong><a class="headerlink" href="#tipos-de-validacion-cruzada" title="Permalink to this heading">#</a></h5>
+<h5><strong>Tipos de validación cruzada</strong><a class="headerlink" href="#tipos-de-validacion-cruzada" title="Link to this heading">#</a></h5>
 <ol class="arabic simple">
 <li><p><strong>Validación cruzada k-fold:</strong></p>
 <ul class="simple">
@@ -4210,7 +4238,7 @@ Test set score: 0.6119
 </section>
 </section>
 <section id="concepto-de-grid-search-busqueda-de-grilla">
-<h4><strong>Concepto de Grid Search (busqueda de grilla)</strong><a class="headerlink" href="#concepto-de-grid-search-busqueda-de-grilla" title="Permalink to this heading">#</a></h4>
+<h4><strong>Concepto de Grid Search (busqueda de grilla)</strong><a class="headerlink" href="#concepto-de-grid-search-busqueda-de-grilla" title="Link to this heading">#</a></h4>
 <p><strong>Grid Search</strong> es un método de búsqueda exhaustiva para encontrar la mejor combinación de hiperparámetros para un modelo de aprendizaje automático. La idea es definir un conjunto de posibles valores para cada hiperparámetro y probar todas las combinaciones posibles para determinar cuál produce el mejor rendimiento del modelo, normalmente utilizando una métrica de evaluación específica, como la precisión o el error cuadrático medio.</p>
 <p>El proceso de Grid Search incluye:</p>
 <ol class="arabic simple">
@@ -4219,7 +4247,7 @@ Test set score: 0.6119
 <li><p><strong>Seleccionar la mejor combinación</strong>: La combinación de hiperparámetros que obtiene el mejor rendimiento en la métrica de evaluación se selecciona como la óptima.</p></li>
 </ol>
 <section id="modelos-de-regresion-que-pueden-usar-grid-search-para-hiperparametrizacion">
-<h5><strong>Modelos de Regresión que pueden usar Grid Search para hiperparametrización</strong><a class="headerlink" href="#modelos-de-regresion-que-pueden-usar-grid-search-para-hiperparametrizacion" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelos de Regresión que pueden usar Grid Search para hiperparametrización</strong><a class="headerlink" href="#modelos-de-regresion-que-pueden-usar-grid-search-para-hiperparametrizacion" title="Link to this heading">#</a></h5>
 <p>Grid Search se puede aplicar a varios modelos de regresión que tienen hiperparámetros ajustables. A continuación, se presentan algunos modelos comunes de regresión y la malla de hiperparámetros típica que se puede utilizar para cada uno.</p>
 <ol class="arabic simple">
 <li><p><strong>Regresión Ridge</strong></p></li>
@@ -4308,7 +4336,7 @@ El modelo SVR es una versión del algoritmo de Máquinas de Soporte Vectorial (S
 </section>
 </section>
 <section id="grid-search-con-validacion-cruzada">
-<h4><strong>Grid Search con validación cruzada</strong><a class="headerlink" href="#grid-search-con-validacion-cruzada" title="Permalink to this heading">#</a></h4>
+<h4><strong>Grid Search con validación cruzada</strong><a class="headerlink" href="#grid-search-con-validacion-cruzada" title="Link to this heading">#</a></h4>
 <p>Para una mejor estimación del rendimiento de la generalización, <strong>en lugar de usar una única división en un conjunto de entrenamiento y otro de validación, podemos usar la validación cruzada para evaluar el rendimiento de cada combinación de parámetros</strong>.</p>
 <ul class="simple">
 <li><p>El proceso general de división de los datos, la ejecución de grid search y la evaluación de los parámetros finales se ilustra en la siguiente figura</p></li>
@@ -4319,7 +4347,7 @@ El modelo SVR es una versión del algoritmo de Máquinas de Soporte Vectorial (S
 </ul>
 </section>
 <section id="analisis-completo-de-los-modelos">
-<h4><strong>Análisis completo de los modelos</strong><a class="headerlink" href="#analisis-completo-de-los-modelos" title="Permalink to this heading">#</a></h4>
+<h4><strong>Análisis completo de los modelos</strong><a class="headerlink" href="#analisis-completo-de-los-modelos" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Carguemos la libreria</p></li>
 </ul>
@@ -4373,7 +4401,7 @@ El modelo SVR es una versión del algoritmo de Máquinas de Soporte Vectorial (S
 </div>
 </div>
 <section id="modelo-rigde">
-<h5><strong>Modelo Rigde</strong><a class="headerlink" href="#modelo-rigde" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelo Rigde</strong><a class="headerlink" href="#modelo-rigde" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Encontremos los mejores parámetros</p></li>
 </ul>
@@ -4876,7 +4904,7 @@ Mejor solver: lsqr
 </div>
 </section>
 <section id="modelo-lasso">
-<h5><strong>Modelo Lasso</strong><a class="headerlink" href="#modelo-lasso" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelo Lasso</strong><a class="headerlink" href="#modelo-lasso" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Hallemos los mejores parámetros</p></li>
 </ul>
@@ -5377,7 +5405,7 @@ Mejor número de iteraciones: 1000
 </div>
 </section>
 <section id="modelo-por-k-vecinos">
-<h5><strong>Modelo por <span class="math notranslate nohighlight">\(k\)</span>-vecinos</strong><a class="headerlink" href="#modelo-por-k-vecinos" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelo por <span class="math notranslate nohighlight">\(k\)</span>-vecinos</strong><a class="headerlink" href="#modelo-por-k-vecinos" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Encontremos los mejores parámetros</p></li>
 </ul>
@@ -5883,7 +5911,7 @@ Mejor distancia: 1
 </div>
 </section>
 <section id="modelo-por-svr-con-kernel-lineal">
-<h5><strong>Modelo por SVR con kernel lineal</strong><a class="headerlink" href="#modelo-por-svr-con-kernel-lineal" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelo por SVR con kernel lineal</strong><a class="headerlink" href="#modelo-por-svr-con-kernel-lineal" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Hallemos los parámetros adecuados</p></li>
 </ul>
@@ -6384,7 +6412,7 @@ Mejor gamma : scale
 </div>
 </section>
 <section id="modelo-por-svr-con-kernel-polinomial">
-<h5><strong>Modelo por SVR con kernel polinomial</strong><a class="headerlink" href="#modelo-por-svr-con-kernel-polinomial" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelo por SVR con kernel polinomial</strong><a class="headerlink" href="#modelo-por-svr-con-kernel-polinomial" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Hallemos los parámetros adecuados</p></li>
 </ul>
@@ -6885,7 +6913,7 @@ Mejor gamma : scale
 </div>
 </section>
 <section id="modelo-por-svr-con-kernel-rbf">
-<h5><strong>Modelo por SVR con kernel RBF</strong><a class="headerlink" href="#modelo-por-svr-con-kernel-rbf" title="Permalink to this heading">#</a></h5>
+<h5><strong>Modelo por SVR con kernel RBF</strong><a class="headerlink" href="#modelo-por-svr-con-kernel-rbf" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Hallemos los parámetros adecuados</p></li>
 </ul>
@@ -7386,7 +7414,7 @@ Mejor gamma : auto
 </div>
 </section>
 <section id="comparacion-de-rendimiento-de-modelos">
-<h5><strong>Comparación de rendimiento de modelos</strong><a class="headerlink" href="#comparacion-de-rendimiento-de-modelos" title="Permalink to this heading">#</a></h5>
+<h5><strong>Comparación de rendimiento de modelos</strong><a class="headerlink" href="#comparacion-de-rendimiento-de-modelos" title="Link to this heading">#</a></h5>
 <p>A continuación realizamos la estandarización y división de los datos, de igual forma se define el <code class="docutils literal notranslate"><span class="pre">scoring</span></code> como métrica para la evaluación del rendimiento de cada uno de los modelos aplicados en este informe.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -7481,10 +7509,10 @@ SVM-RBF: 0.750 (0.018)
 </section>
 </section>
 <section id="clasificacion">
-<h2><strong>Clasificación</strong><a class="headerlink" href="#clasificacion" title="Permalink to this heading">#</a></h2>
+<h2><strong>Clasificación</strong><a class="headerlink" href="#clasificacion" title="Link to this heading">#</a></h2>
 <p>Los <strong>modelos de clasificación</strong> son algoritmos de aprendizaje automático que se utilizan para asignar una etiqueta o clase a cada muestra de datos de entrada. En otras palabras, estos modelos predicen categorías discretas o etiquetas de clase. Por ejemplo, en un problema de clasificación binaria, el objetivo puede ser predecir si se le entrega o no una tarjeta de credito. Para la clasificación multiclase, el modelo puede asignar una imagen a una de varias categorías, como perros, gatos o caballos.</p>
 <section id="tipos-de-modelos-de-clasificacion">
-<h3><strong>Tipos de Modelos de Clasificación</strong><a class="headerlink" href="#tipos-de-modelos-de-clasificacion" title="Permalink to this heading">#</a></h3>
+<h3><strong>Tipos de Modelos de Clasificación</strong><a class="headerlink" href="#tipos-de-modelos-de-clasificacion" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><strong>Modelos Lineales</strong></p></li>
 </ol>
@@ -7556,10 +7584,10 @@ SVM-RBF: 0.750 (0.018)
 </ul>
 </section>
 <section id="regresion-logistica">
-<h3><strong>Regresión logística</strong><a class="headerlink" href="#regresion-logistica" title="Permalink to this heading">#</a></h3>
+<h3><strong>Regresión logística</strong><a class="headerlink" href="#regresion-logistica" title="Link to this heading">#</a></h3>
 <p>El <strong>modelo de regresión logística</strong> es un algoritmo de aprendizaje automático utilizado para resolver problemas de clasificación binaria. Se usa cuando el objetivo es predecir una de dos clases posibles, como “sí” o “no”, “positivo” o “negativo”. La regresión logística estima la probabilidad de pertenencia a una clase basándose en una combinación lineal de las características de entrada.</p>
 <section id="caracteristicas-claves">
-<h4><strong>Características claves</strong><a class="headerlink" href="#caracteristicas-claves" title="Permalink to this heading">#</a></h4>
+<h4><strong>Características claves</strong><a class="headerlink" href="#caracteristicas-claves" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Función Sigmoide</strong>: La regresión logística utiliza la función sigmoide para transformar el resultado de una combinación lineal de las características en una probabilidad, que está acotada entre 0 y 1. La función sigmoide se define como:</p></li>
 </ul>
@@ -7595,7 +7623,7 @@ J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) +
 </div>
 </section>
 <section id="idea-de-la-regresion-logistica">
-<h4><strong>Idea de la regresión logística</strong><a class="headerlink" href="#idea-de-la-regresion-logistica" title="Permalink to this heading">#</a></h4>
+<h4><strong>Idea de la regresión logística</strong><a class="headerlink" href="#idea-de-la-regresion-logistica" title="Link to this heading">#</a></h4>
 <p>Veamos una idea visual de la regresión logística</p>
 <p><img alt="rl_1" src="_images/rl1.png" /></p>
 <p><img alt="rl_2" src="_images/rl2.png" /></p>
@@ -7608,12 +7636,12 @@ J(\theta) = -\frac{1}{m} \sum_{i=1}^{m} \left[ y^{(i)} \log(h_\theta(x^{(i)})) +
 <p><img alt="rl_9" src="_images/rl9.png" /></p>
 </section>
 <section id="modelo-de-clasificacion-usando-regresion-logistica-de-entrega-o-no-de-tarjetas-de-creditos">
-<h4><strong>Modelo de clasificación usando regresión logística de entrega o no de tarjetas de créditos</strong><a class="headerlink" href="#modelo-de-clasificacion-usando-regresion-logistica-de-entrega-o-no-de-tarjetas-de-creditos" title="Permalink to this heading">#</a></h4>
+<h4><strong>Modelo de clasificación usando regresión logística de entrega o no de tarjetas de créditos</strong><a class="headerlink" href="#modelo-de-clasificacion-usando-regresion-logistica-de-entrega-o-no-de-tarjetas-de-creditos" title="Link to this heading">#</a></h4>
 <p>Los bancos comerciales reciben <em>muchas</em> solicitudes de tarjetas de crédito.
 Muchas de ellas son rechazadas por muchas razones, como saldos de préstamos elevados, bajos niveles de ingresos o demasiadas consultas en el informe crediticio de una persona, por ejemplo. Analizar manualmente estas solicitudes es una tarea rutinaria, propensa a errores y requiere mucho tiempo (¡y el tiempo es dinero!). Por suerte, esta tarea puede automatizarse con el poder del aprendizaje automático y casi todos los bancos comerciales lo hacen hoy en día. En colab, construiremos un predictor automático de aprobación de tarjetas de crédito utilizando técnicas de aprendizaje automático, tal y como hacen los bancos de verdad.</p><p><img alt="tarjeta" src="_images/images.png" /></p>
 <p>Utilizaremos el conjunto de datos  <a href="http://archive.ics.uci.edu/ml/datasets/credit+approval">Credit Card Approval</a> del UCI Machine Learning Repository. La estructura de este cuaderno es la siguiente:</p>
 <ul><section id="importar-las-librerias">
-<h5>1. <strong>Importar las librerias</strong><a class="headerlink" href="#importar-las-librerias" title="Permalink to this heading">#</a></h5>
+<h5>1. <strong>Importar las librerias</strong><a class="headerlink" href="#importar-las-librerias" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Importar </span>
@@ -7634,7 +7662,7 @@ Muchas de ellas son rechazadas por muchas razones, como saldos de préstamos ele
 </div>
 </section>
 <section id="id2">
-<h5>2. <strong>Lectura de los datos</strong><a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h5>
+<h5>2. <strong>Lectura de los datos</strong><a class="headerlink" href="#id2" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cargar el conjunto de datos</span>
@@ -8064,7 +8092,7 @@ memory usage: 86.4+ KB
 </div>
 </section>
 <section id="datos-faltantes-o-atipicos">
-<h5>3. <strong>Datos faltantes o atípicos</strong><a class="headerlink" href="#datos-faltantes-o-atipicos" title="Permalink to this heading">#</a></h5>
+<h5>3. <strong>Datos faltantes o atípicos</strong><a class="headerlink" href="#datos-faltantes-o-atipicos" title="Link to this heading">#</a></h5>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">missing_values</span> <span class="o">=</span> <span class="n">cc_apps</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
@@ -8125,7 +8153,7 @@ memory usage: 86.4+ KB
 <p>Así, vemos que hay datos atípicos, podemos ver que tenemos datos llenados con <code class="docutils literal notranslate"><span class="pre">'?'</span></code>. De ejercicio queda la revisión de cada una de las variables.</p>
 </section>
 <section id="etl-conjunto-de-entrenamiento-y-prueba">
-<h5><strong>4. ETL, conjunto de entrenamiento y prueba</strong><a class="headerlink" href="#etl-conjunto-de-entrenamiento-y-prueba" title="Permalink to this heading">#</a></h5>
+<h5><strong>4. ETL, conjunto de entrenamiento y prueba</strong><a class="headerlink" href="#etl-conjunto-de-entrenamiento-y-prueba" title="Link to this heading">#</a></h5>
 <p>Cambiemos los interrogantes por <code class="docutils literal notranslate"><span class="pre">NAN</span></code>s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -8350,7 +8378,7 @@ dtype: int64
 </div>
 </section>
 <section id="preprocesamiento-de-los-datos">
-<h5>5. <strong>Preprocesamiento de los datos</strong><a class="headerlink" href="#preprocesamiento-de-los-datos" title="Permalink to this heading">#</a></h5>
+<h5>5. <strong>Preprocesamiento de los datos</strong><a class="headerlink" href="#preprocesamiento-de-los-datos" title="Link to this heading">#</a></h5>
 <ul>
 <li><p>Los valores perdidos ya se han tratado correctamente.</p> <p>Antes de proceder a la construcción de nuestro modelo de aprendizaje automático, aún es necesario realizar algunos preprocesamientos de datos menores pero esenciales. Vamos a dividir estos pasos de preprocesamiento restantes en dos tareas principales:</p>
   <ol>
@@ -8382,7 +8410,7 @@ dtype: int64
 </div>
 </section>
 <section id="id3">
-<h5>6. <strong>Construcción del modelo</strong><a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h5>
+<h5>6. <strong>Construcción del modelo</strong><a class="headerlink" href="#id3" title="Link to this heading">#</a></h5>
 <p>Ahora sólo nos queda un último paso de preprocesamiento, el escalado, antes de poder ajustar un modelo de aprendizaje automático a los datos. </p>
 <p>Intentemos comprender qué significan estos valores escalados en el mundo real. Utilicemos la <code>puntuación crediticia</code> como ejemplo. La puntuación crediticia de una persona es su solvencia basada en su historial de crédito. Cuanto más alto sea este número, más solvente se considera a una persona. Así, la <code>puntuacion crediticia</code> de 1 es el más alto ya que estamos reescalando todos los valores al rango de 0-1.</p><div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -9324,16 +9352,16 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </section>
 </section>
 <section id="metricas-de-evaluacion-de-un-modelo">
-<h4><strong>Métricas de evaluación de un modelo</strong><a class="headerlink" href="#metricas-de-evaluacion-de-un-modelo" title="Permalink to this heading">#</a></h4>
+<h4><strong>Métricas de evaluación de un modelo</strong><a class="headerlink" href="#metricas-de-evaluacion-de-un-modelo" title="Link to this heading">#</a></h4>
 <p>Las <strong>métricas de evaluación en un modelo de clasificación</strong> son fundamentales para medir el desempeño del modelo y entender qué tan bien clasifica las instancias. Cada métrica proporciona <strong>información diferente sobre la calidad del modelo</strong> y es <strong>importante seleccionar la métrica adecuada según el contexto del problema</strong>.</p>
 <section id="matriz-de-confunsion">
-<h5><strong>Matriz de confunsión</strong><a class="headerlink" href="#matriz-de-confunsion" title="Permalink to this heading">#</a></h5>
+<h5><strong>Matriz de confunsión</strong><a class="headerlink" href="#matriz-de-confunsion" title="Link to this heading">#</a></h5>
 <p>La <strong>matriz de confusión</strong> organiza las predicciones del modelo en una tabla de contingencia para mostrar cuántas instancias fueron clasificadas correctamente o incorrectamente para cada clase. Es especialmente útil para problemas de clasificación binaria, pero también se puede extender a la clasificación multiclase.</p>
 <ol class="arabic simple">
 <li><p><strong>Fórmula Matemática</strong></p></li>
 </ol>
 <p>Para un problema de clasificación binaria, la matriz de confusión tiene la siguiente estructura:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Positiva</p></th>
@@ -9351,6 +9379,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </tr>
 </tbody>
 </table>
+</div>
 <ul class="simple">
 <li><p><strong>TP (True Positives)</strong>: Instancias correctamente predichas como positivas.</p></li>
 <li><p><strong>FP (False Positives)</strong>: Instancias incorrectamente predichas como positivas (error tipo I).</p></li>
@@ -9421,7 +9450,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p><strong>Ejemplo</strong></p></li>
 </ol>
 <p>Supongamos un problema de clasificación donde un banco quiere decidir si aprueba o no las solicitudes de tarjetas de crédito de los clientes. El modelo clasifica si una solicitud es aprobada (positiva) o rechazada (negativa). Se tienen los siguientes resultados:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Aprobada</p></th>
@@ -9439,6 +9468,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </tr>
 </tbody>
 </table>
+</div>
 <p>En este ejemplo:</p>
 <ul class="simple">
 <li><p><strong>TP = 70</strong>: 70 solicitudes fueron correctamente predichas como aprobadas.</p></li>
@@ -9448,7 +9478,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </ul>
 </section>
 <section id="exactitud-accuracy">
-<h5><strong>Exactitud (Accuracy)</strong><a class="headerlink" href="#exactitud-accuracy" title="Permalink to this heading">#</a></h5>
+<h5><strong>Exactitud (Accuracy)</strong><a class="headerlink" href="#exactitud-accuracy" title="Link to this heading">#</a></h5>
 <p>La <strong>exactitud</strong> mide la proporción de predicciones correctas (tanto aprobadas como rechazadas) en comparación con el total de predicciones realizadas. Es una métrica simple y fácil de entender que proporciona una idea general de cuán bien está funcionando el modelo.</p>
 <ol class="arabic simple">
 <li><p>Fórmula matemática</p></li>
@@ -9482,7 +9512,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p>Ejemplo</p></li>
 </ol>
 <p>Supongamos un problema de clasificación donde un banco quiere decidir si aprueba o no las solicitudes de tarjetas de crédito de los clientes. Se tienen los siguientes resultados en la matriz de confusión:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Aprobada</p></th>
@@ -9500,6 +9530,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </tr>
 </tbody>
 </table>
+</div>
 <p>En este caso:</p>
 <ul class="simple">
 <li><p><strong>TP = 70</strong>: 70 solicitudes fueron correctamente predichas como aprobadas.</p></li>
@@ -9515,7 +9546,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Por lo tanto, la exactitud es 0.85, lo que significa que el 85% de las predicciones del modelo fueron correctas.</p>
 </section>
 <section id="precision-precision">
-<h5><strong>Precisión (Precision)</strong><a class="headerlink" href="#precision-precision" title="Permalink to this heading">#</a></h5>
+<h5><strong>Precisión (Precision)</strong><a class="headerlink" href="#precision-precision" title="Link to this heading">#</a></h5>
 <p>La <strong>precisión</strong> mide la proporción de predicciones positivas correctas frente al total de predicciones positivas realizadas por el modelo. En otras palabras, evalúa cuántas de las solicitudes predichas como aprobadas realmente deberían haber sido aprobadas.</p>
 <ol class="arabic simple">
 <li><p>Fórmula matemática</p></li>
@@ -9547,7 +9578,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p>Ejemplo</p></li>
 </ol>
 <p>Supongamos un problema de clasificación donde un banco quiere decidir si aprueba o no las solicitudes de tarjetas de crédito de los clientes. Se tienen los siguientes resultados en la matriz de confusión:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Aprobada</p></th>
@@ -9565,6 +9596,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </tr>
 </tbody>
 </table>
+</div>
 <p>En este caso:</p>
 <ul class="simple">
 <li><p><strong>TP = 70</strong>: 70 solicitudes fueron correctamente predichas como aprobadas.</p></li>
@@ -9578,7 +9610,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Por lo tanto, la precisión es 0.875, lo que significa que el 87.5% de las solicitudes predichas como aprobadas realmente eran aprobables.</p>
 </section>
 <section id="recall-sensibilidad">
-<h5><strong>Recall (Sensibilidad)</strong><a class="headerlink" href="#recall-sensibilidad" title="Permalink to this heading">#</a></h5>
+<h5><strong>Recall (Sensibilidad)</strong><a class="headerlink" href="#recall-sensibilidad" title="Link to this heading">#</a></h5>
 <p>El <strong>recall</strong>, o sensibilidad, mide la proporción de instancias positivas que fueron correctamente identificadas por el modelo. En otras palabras, indica cuántas de las solicitudes que realmente debían ser aprobadas fueron efectivamente aprobadas por el modelo.</p>
 <ol class="arabic simple">
 <li><p>Fórmula matemática</p></li>
@@ -9611,7 +9643,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p>Ejemplo</p></li>
 </ol>
 <p>Supongamos un problema de clasificación donde un banco quiere decidir si aprueba o no las solicitudes de tarjetas de crédito de los clientes. Se tienen los siguientes resultados en la matriz de confusión:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Aprobada</p></th>
@@ -9629,6 +9661,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </tr>
 </tbody>
 </table>
+</div>
 <p>En este caso:</p>
 <ul class="simple">
 <li><p><strong>TP = 70</strong>: 70 solicitudes fueron correctamente predichas como aprobadas.</p></li>
@@ -9642,7 +9675,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Por lo tanto, el recall es 0.777, lo que significa que el 77.7% de las solicitudes que debían ser aprobadas fueron correctamente identificadas como aprobadas por el modelo.</p>
 </section>
 <section id="especificidad-specificity">
-<h5><strong>Especificidad (Specificity)</strong><a class="headerlink" href="#especificidad-specificity" title="Permalink to this heading">#</a></h5>
+<h5><strong>Especificidad (Specificity)</strong><a class="headerlink" href="#especificidad-specificity" title="Link to this heading">#</a></h5>
 <p>La <strong>especificidad</strong> mide la proporción de instancias negativas que fueron correctamente identificadas por el modelo. En otras palabras, indica cuántas de las solicitudes que realmente debían ser rechazadas fueron efectivamente rechazadas por el modelo.</p>
 <ol class="arabic simple">
 <li><p>Fórmula matemática</p></li>
@@ -9675,7 +9708,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <li><p>Ejemplo</p></li>
 </ol>
 <p>Supongamos un problema de clasificación donde un banco quiere decidir si aprueba o no las solicitudes de tarjetas de crédito de los clientes. Se tienen los siguientes resultados en la matriz de confusión:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Aprobada</p></th>
@@ -9693,6 +9726,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </tr>
 </tbody>
 </table>
+</div>
 <p>En este caso:</p>
 <ul class="simple">
 <li><p><strong>TN = 100</strong>: 100 solicitudes fueron correctamente predichas como rechazadas.</p></li>
@@ -9706,7 +9740,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 <p>Por lo tanto, la especificidad es 0.909, lo que significa que el 90.9% de las solicitudes que debían ser rechazadas fueron correctamente identificadas como rechazadas por el modelo.</p>
 </section>
 <section id="f1-score">
-<h5><strong>F1-Score</strong><a class="headerlink" href="#f1-score" title="Permalink to this heading">#</a></h5>
+<h5><strong>F1-Score</strong><a class="headerlink" href="#f1-score" title="Link to this heading">#</a></h5>
 <p>El <strong>F1-Score</strong> es la media armónica de la precisión y el recall. Proporciona una medida del equilibrio entre estos dos aspectos, siendo especialmente útil cuando existe un desbalance entre los falsos positivos y los falsos negativos. El F1-Score es alto cuando tanto la precisión como el recall son altos.</p>
 <p>1 Fórmula matemática</p>
 <p>La fórmula para calcular el F1-Score es:</p>
@@ -9737,7 +9771,7 @@ F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \tex
 <li><p>Ejemplo</p></li>
 </ol>
 <p>Supongamos un problema de clasificación donde un banco quiere decidir si aprueba o no las solicitudes de tarjetas de crédito de los clientes. Se tienen los siguientes resultados en la matriz de confusión:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p></p></th>
 <th class="head"><p>Predicción Aprobada</p></th>
@@ -9755,6 +9789,7 @@ F1 = 2 \cdot \frac{\text{Precision} \cdot \text{Recall}}{\text{Precision} + \tex
 </tr>
 </tbody>
 </table>
+</div>
 <p>Ya calculamos anteriormente:</p>
 <ul class="simple">
 <li><p><strong>Precisión (Precision)</strong>:
@@ -9774,7 +9809,7 @@ F1 = 2 \cdot \frac{0.875 \cdot 0.777}{0.875 + 0.777} \approx 2 \cdot \frac{0.680
 <p>Por lo tanto, el F1-Score es aproximadamente 0.823, lo que significa que el equilibrio entre la precisión y el recall del modelo es del 82.3%.</p>
 </section>
 <section id="curva-roc-y-auc-roc">
-<h5><strong>Curva ROC y AUC-ROC</strong><a class="headerlink" href="#curva-roc-y-auc-roc" title="Permalink to this heading">#</a></h5>
+<h5><strong>Curva ROC y AUC-ROC</strong><a class="headerlink" href="#curva-roc-y-auc-roc" title="Link to this heading">#</a></h5>
 <p>La <strong>curva ROC (Receiver Operating Characteristic)</strong> es un gráfico que muestra la relación entre la tasa de verdaderos positivos (recall) y la tasa de falsos positivos para diferentes umbrales de decisión. El <strong>AUC-ROC (Área Bajo la Curva)</strong> mide el área total bajo la curva ROC, proporcionando una métrica que resume la capacidad del modelo para discriminar entre clases positivas y negativas.</p>
 <ol class="arabic simple">
 <li><p>Definiciones y sus formulas matemáticas</p></li>
@@ -9824,7 +9859,7 @@ Mide la proporción de instancias negativas que fueron incorrectamente clasifica
 </ol>
 <p>Supongamos que un banco utiliza un modelo para decidir si aprueba o no las solicitudes de tarjetas de crédito. El modelo genera una probabilidad para cada solicitud, y al variar el umbral de decisión, podemos observar cómo cambian la TPR y la FPR.</p>
 <p>Consideremos algunos valores para diferentes umbrales:</p>
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Umbral</p></th>
 <th class="head"><p>TPR (Recall)</p></th>
@@ -9854,10 +9889,11 @@ Mide la proporción de instancias negativas que fueron incorrectamente clasifica
 </tr>
 </tbody>
 </table>
+</div>
 <p>Al graficar estos puntos en un gráfico ROC (con FPR en el eje X y TPR en el eje Y), obtendremos la curva ROC. El AUC se calcula como el área bajo esta curva. En este ejemplo, si el área es 0.85, significa que el modelo tiene un buen rendimiento para discriminar entre las clases (un AUC más cercano a 1 indica un mejor rendimiento).</p>
 </section>
 <section id="metricas-de-evaluacion-del-modelo-de-regresion-logistica">
-<h5><strong>Metricas de evaluación del modelo de regresión logística</strong><a class="headerlink" href="#metricas-de-evaluacion-del-modelo-de-regresion-logistica" title="Permalink to this heading">#</a></h5>
+<h5><strong>Metricas de evaluación del modelo de regresión logística</strong><a class="headerlink" href="#metricas-de-evaluacion-del-modelo-de-regresion-logistica" title="Link to this heading">#</a></h5>
 <ul class="simple">
 <li><p>Hagamos el modelo de los mejores parámetros</p></li>
 </ul>
@@ -10451,10 +10487,10 @@ weighted avg       0.82      0.82      0.82       138
 </section>
 </section>
 <section id="modelo-de-clasificacion-de-knn">
-<h3><strong>Modelo de clasificación de KNN</strong><a class="headerlink" href="#modelo-de-clasificacion-de-knn" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo de clasificación de KNN</strong><a class="headerlink" href="#modelo-de-clasificacion-de-knn" title="Link to this heading">#</a></h3>
 <p><strong>K-Nearest Neighbors (KNN)</strong> es un algoritmo de aprendizaje supervisado utilizado tanto para clasificación como para regresión. En la clasificación, asigna una clase a una nueva instancia basada en las clases de sus <strong>k</strong> vecinos más cercanos en el espacio de características. La proximidad o cercanía se mide usando diversas métricas de distancia, como la <strong>distancia euclidiana</strong>, <strong>Manhattan</strong>, o <strong>Minkowski</strong>.</p>
 <section id="caracteristicas">
-<h4><strong>Características</strong>:<a class="headerlink" href="#caracteristicas" title="Permalink to this heading">#</a></h4>
+<h4><strong>Características</strong>:<a class="headerlink" href="#caracteristicas" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Simple y fácil de implementar</strong>: El algoritmo es intuitivo, ya que se basa en medir distancias entre puntos para clasificar las instancias.</p></li>
 <li><p><strong>Aprendizaje perezoso</strong>: No “aprende” un modelo explícitamente, sino que almacena los datos de entrenamiento y hace las predicciones calculando distancias en el momento de la clasificación.</p></li>
@@ -10481,7 +10517,7 @@ weighted avg       0.82      0.82      0.82       138
 </div>
 </section>
 <section id="metricas-de-distancia">
-<h4><strong>Métricas de distancia</strong><a class="headerlink" href="#metricas-de-distancia" title="Permalink to this heading">#</a></h4>
+<h4><strong>Métricas de distancia</strong><a class="headerlink" href="#metricas-de-distancia" title="Link to this heading">#</a></h4>
 <ol class="arabic">
 <li><p><strong>Distancia Euclidiana</strong>:<br />
 La distancia euclidiana mide la “distancia recta” entre dos puntos en un espacio euclidiano. Para dos puntos <span class="math notranslate nohighlight">\(x = (x_1, x_2, \ldots, x_n)\)</span> y <span class="math notranslate nohighlight">\(y = (y_1, y_2, \ldots, y_n)\)</span>, se calcula como:</p>
@@ -10522,7 +10558,7 @@ La distancia Chebyshev mide la mayor diferencia absoluta entre las coordenadas d
 <p>Estas métricas ayudan a determinar qué tan cerca están dos puntos en el espacio de características y son fundamentales para que el algoritmo KNN determine los vecinos más cercanos. La elección de la métrica depende del tipo de datos y la naturaleza del problema.</p>
 </section>
 <section id="idea-del-knn">
-<h4><strong>Idea del KNN</strong><a class="headerlink" href="#idea-del-knn" title="Permalink to this heading">#</a></h4>
+<h4><strong>Idea del KNN</strong><a class="headerlink" href="#idea-del-knn" title="Link to this heading">#</a></h4>
 <p>La idea visual de KNN es la siguiente:</p>
 <p><img alt="knn_1" src="_images/knn1.png" /></p>
 <ul class="simple">
@@ -10542,7 +10578,7 @@ La distancia Chebyshev mide la mayor diferencia absoluta entre las coordenadas d
 <p><img alt="knn_8" src="_images/knn8.png" /></p>
 </section>
 <section id="construccion-del-modelo-de-knn-con-sus-metricas">
-<h4><strong>Construcción del modelo de KNN con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-de-knn-con-sus-metricas" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo de KNN con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-de-knn-con-sus-metricas" title="Link to this heading">#</a></h4>
 <p>Los hiperparámetros para KNN para Clasificación son:</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">n_neighbors</span></code></strong>: Número de vecinos a considerar. Es un parámetro crítico que afecta la clasificación.</p></li>
@@ -11605,10 +11641,10 @@ weighted avg       0.81      0.81      0.81       138
 </section>
 </section>
 <section id="modelo-de-maquina-de-soporte-vectorial">
-<h3><strong>Modelo de Máquina de Soporte Vectorial</strong><a class="headerlink" href="#modelo-de-maquina-de-soporte-vectorial" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo de Máquina de Soporte Vectorial</strong><a class="headerlink" href="#modelo-de-maquina-de-soporte-vectorial" title="Link to this heading">#</a></h3>
 <p>Las <strong>Máquinas de Soporte Vectorial</strong> (SVM, por sus siglas en inglés) son un conjunto de métodos de aprendizaje supervisado utilizados para clasificación y regresión. La idea principal detrás de SVM es encontrar el “hiperplano” que mejor separa las clases en un espacio multidimensional. Este hiperplano se elige de manera que maximice el margen entre las clases, es decir, la distancia entre el hiperplano y los puntos de datos más cercanos de cada clase, llamados vectores de soporte. En el caso de clasificación binaria, SVM trata de maximizar la distancia (o margen) entre el hiperplano de separación y los puntos de datos más cercanos de cada clase, conocidos como <strong>vectores de soporte</strong>. Esto hace que el modelo sea robusto y tenga un buen rendimiento en casos donde las clases están bien separadas.</p>
 <section id="caracteristicas-de-los-modelos-svm">
-<h4><strong>Características de los Modelos SVM</strong><a class="headerlink" href="#caracteristicas-de-los-modelos-svm" title="Permalink to this heading">#</a></h4>
+<h4><strong>Características de los Modelos SVM</strong><a class="headerlink" href="#caracteristicas-de-los-modelos-svm" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Hiperplano</strong>: La superficie que separa diferentes clases en el espacio de características.</p></li>
 <li><p><strong>Vectores de soporte</strong>: Son los puntos de datos que están más cerca del hiperplano y que, si se eliminaran, cambiarían la posición del hiperplano.</p></li>
@@ -11640,7 +11676,7 @@ weighted avg       0.81      0.81      0.81       138
 </div>
 </section>
 <section id="idea-de-maquina-de-soporte-vectorial">
-<h4><strong>Idea de maquina de soporte vectorial</strong><a class="headerlink" href="#idea-de-maquina-de-soporte-vectorial" title="Permalink to this heading">#</a></h4>
+<h4><strong>Idea de maquina de soporte vectorial</strong><a class="headerlink" href="#idea-de-maquina-de-soporte-vectorial" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>¿Comó separamos estos puntos?</p></li>
 </ul>
@@ -11665,7 +11701,7 @@ weighted avg       0.81      0.81      0.81       138
 <p><img alt="svc_9" src="_images/svc9.png" /></p>
 </section>
 <section id="idea-del-kernel-de-maquina-de-soporte-vectorial">
-<h4><strong>Idea del kernel de maquina de soporte vectorial</strong><a class="headerlink" href="#idea-del-kernel-de-maquina-de-soporte-vectorial" title="Permalink to this heading">#</a></h4>
+<h4><strong>Idea del kernel de maquina de soporte vectorial</strong><a class="headerlink" href="#idea-del-kernel-de-maquina-de-soporte-vectorial" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>No siempre debemos usar un kernel lineal, ya que no siempre funciona</p></li>
 </ul>
@@ -11683,7 +11719,7 @@ weighted avg       0.81      0.81      0.81       138
 <p><img alt="svc_15" src="_images/svc15.png" /></p>
 </section>
 <section id="construccion-del-modelo-de-svm-con-sus-metricas">
-<h4><strong>Construcción del modelo de SVM con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-de-svm-con-sus-metricas" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo de SVM con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-de-svm-con-sus-metricas" title="Link to this heading">#</a></h4>
 <p>Aquí tenemos los principales hiperparámetros que puedes ajustar en un modelo SVM para la clasificación.</p>
 <ul class="simple">
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">C</span></code></strong>: Parámetro de regularización. Controla el trade-off entre maximizar el margen y minimizar el error de clasificación. Un valor más pequeño implica un margen más amplio, pero puede aumentar el error de clasificación.</p></li>
@@ -12722,10 +12758,10 @@ weighted avg       0.83      0.83      0.83       138
 </section>
 </section>
 <section id="modelo-de-naives-bayes">
-<h3><strong>Modelo de Naives-Bayes</strong><a class="headerlink" href="#modelo-de-naives-bayes" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo de Naives-Bayes</strong><a class="headerlink" href="#modelo-de-naives-bayes" title="Link to this heading">#</a></h3>
 <p>El <strong>Clasificador Naive Bayes</strong> es un modelo de aprendizaje supervisado basado en la <strong>Regla de Bayes</strong>, que se utiliza para problemas de clasificación. Este clasificador asume que las características son independientes entre sí dado el valor de la clase, lo que simplifica el cálculo de las probabilidades. Aunque esta suposición de independencia rara vez se cumple completamente en la práctica, el modelo es efectivo y eficiente para problemas de clasificación, especialmente en el análisis de texto y problemas multiclase.</p>
 <section id="definicion-de-la-regla-de-bayes">
-<h4><strong>Definición de la Regla de Bayes</strong><a class="headerlink" href="#definicion-de-la-regla-de-bayes" title="Permalink to this heading">#</a></h4>
+<h4><strong>Definición de la Regla de Bayes</strong><a class="headerlink" href="#definicion-de-la-regla-de-bayes" title="Link to this heading">#</a></h4>
 <p>La <strong>Regla de Bayes</strong> es un principio fundamental en probabilidad y estadística que permite calcular la probabilidad de que un evento ocurra dado que otro evento ya ha ocurrido. Esta regla es clave para la inferencia estadística y es la base de varios modelos probabilísticos, como el clasificador Naive Bayes. La Regla de Bayes se puede expresar como:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -12740,7 +12776,7 @@ P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
 </ul>
 </section>
 <section id="ejemplo-de-la-regla-de-bayes">
-<h4><strong>Ejemplo de la regla de Bayes</strong><a class="headerlink" href="#ejemplo-de-la-regla-de-bayes" title="Permalink to this heading">#</a></h4>
+<h4><strong>Ejemplo de la regla de Bayes</strong><a class="headerlink" href="#ejemplo-de-la-regla-de-bayes" title="Link to this heading">#</a></h4>
 <p>Supongamos que un banco quiere evaluar la probabilidad de que un cliente esté en alto riesgo de incumplimiento de pago de un préstamo (es decir, que no lo pague) dado que tiene un historial crediticio bajo. Usaremos la <strong>Regla de Bayes</strong> para calcular esta probabilidad.</p>
 <ol class="arabic">
 <li><p><strong>Definimos los eventos:</strong></p>
@@ -12775,7 +12811,7 @@ P(A | B) = \frac{P(B | A) \cdot P(A)}{P(B)}
 <p>Este ejemplo muestra cómo la Regla de Bayes permite al banco actualizar las probabilidades de riesgo en función de la información disponible sobre el historial crediticio del cliente.</p>
 </section>
 <section id="clasificador-naive-bayes">
-<h4><strong>Clasificador Naive Bayes</strong><a class="headerlink" href="#clasificador-naive-bayes" title="Permalink to this heading">#</a></h4>
+<h4><strong>Clasificador Naive Bayes</strong><a class="headerlink" href="#clasificador-naive-bayes" title="Link to this heading">#</a></h4>
 <p>El <strong>Clasificador Naive Bayes</strong> es un modelo de aprendizaje supervisado basado en la <strong>Regla de Bayes</strong>. Se utiliza para problemas de clasificación, asumiendo que las características de cada instancia son independientes entre sí dado el valor de la clase. Aunque esta suposición rara vez es completamente cierta, el modelo es efectivo y eficiente para muchas aplicaciones prácticas, especialmente en el análisis de texto y problemas multiclase.</p>
 <ol class="arabic simple">
 <li><p><strong>Fórmula Matemática del Clasificador Naive Bayes</strong></p></li>
@@ -12820,7 +12856,7 @@ P(C_k | x) \propto P(C_k) \prod_{i=1}^{n} P(x_i | C_k)
 <p>El clasificador Naive Bayes es una herramienta poderosa y sencilla para tareas de clasificación rápida y efectiva, siempre que las características sean aproximadamente independientes.</p>
 </section>
 <section id="modelos-de-naive-bayes-para-clasificacion">
-<h4><strong>Modelos de Naive Bayes para clasificación</strong><a class="headerlink" href="#modelos-de-naive-bayes-para-clasificacion" title="Permalink to this heading">#</a></h4>
+<h4><strong>Modelos de Naive Bayes para clasificación</strong><a class="headerlink" href="#modelos-de-naive-bayes-para-clasificacion" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Gaussian Naive Bayes (<code class="docutils literal notranslate"><span class="pre">GaussianNB</span></code>)</strong></p></li>
 </ol>
@@ -12867,7 +12903,7 @@ P(C_k | x) \propto P(C_k) \prod_{i=1}^{n} P(x_i | C_k)
 </ul>
 </section>
 <section id="id4">
-<h4><strong>Construcción del modelo</strong><a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo</strong><a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
 <p>Aquí, tenemos los principales hiperparámetros del modelo de Gaussian Naive Bayes <code class="docutils literal notranslate"><span class="pre">GaussianNB</span></code>.</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">priors</span></code></p>
@@ -13898,12 +13934,12 @@ weighted avg       0.74      0.72      0.72       138
 </section>
 </section>
 <section id="modelo-de-arbol-de-decision">
-<h3><strong>Modelo de arbol de decisión</strong><a class="headerlink" href="#modelo-de-arbol-de-decision" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo de arbol de decisión</strong><a class="headerlink" href="#modelo-de-arbol-de-decision" title="Link to this heading">#</a></h3>
 <p>Los <strong>árboles de decisión</strong> son modelos predictivos que utilizan reglas binarias (sí/no) para segmentar las observaciones en función de sus atributos, permitiendo predecir el valor de la variable objetivo. Este tipo de modelo es ideal para problemas con múltiples predictores que interactúan de manera compleja y no lineal, ya que divide el espacio de predictores en regiones simples donde resulta más fácil gestionar estas interacciones.</p>
 <p>Muchos métodos predictivos construyen modelos globales, donde una única ecuación representa el comportamiento de todo el espacio de datos. Sin embargo, en casos con interacciones complejas entre predictores, resulta difícil encontrar un modelo global que capture adecuadamente las relaciones entre las variables. Los métodos estadísticos y de machine learning basados en árboles son <strong>técnicas supervisadas no paramétricas</strong> que segmentan el espacio de los predictores, dividiéndolo en subespacios más manejables. Esta característica de segmentación es una de las principales razones por las que estos modelos son tan efectivos.</p>
 <p>Gracias a su capacidad para capturar relaciones complejas, los métodos basados en árboles se han consolidado como una herramienta fundamental en el ámbito predictivo, proporcionando buenos resultados en una variedad de problemas. Este documento explora en detalle cómo se construyen y aplican los árboles de decisión para tareas de <strong>clasificación y regresión</strong>, y presenta cómo estos modelos forman la base de técnicas más avanzadas como <strong>Random Forest</strong> y <strong>Gradient Boosting Machine</strong>.</p>
 <section id="componentes-de-un-arbol-de-decision">
-<h4><strong>Componentes de un árbol de decisión</strong><a class="headerlink" href="#componentes-de-un-arbol-de-decision" title="Permalink to this heading">#</a></h4>
+<h4><strong>Componentes de un árbol de decisión</strong><a class="headerlink" href="#componentes-de-un-arbol-de-decision" title="Link to this heading">#</a></h4>
 <ol class="arabic simple">
 <li><p><strong>Nodo raíz</strong>:</p>
 <ul class="simple">
@@ -13929,7 +13965,7 @@ weighted avg       0.74      0.72      0.72       138
 <p>Un árbol de decisión puede visualizarse como una estructura jerárquica de decisiones, donde cada nivel del árbol divide los datos en subconjuntos más homogéneos en función de las características seleccionadas en cada nodo.</p>
 </section>
 <section id="construccion-del-arbol">
-<h4><strong>Construcción del arbol</strong><a class="headerlink" href="#construccion-del-arbol" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del arbol</strong><a class="headerlink" href="#construccion-del-arbol" title="Link to this heading">#</a></h4>
 <p>Para construir un árbol de clasificación, se utiliza el mismo método de <strong>recursive binary splitting</strong> que se emplea en árboles de regresión. Sin embargo, cuando la variable de respuesta es cualitativa, no se puede utilizar el <strong>RSS</strong> (Residual Sum of Squares) como criterio de selección de divisiones óptimas. Existen varias alternativas, cuyo objetivo es encontrar nodos lo más puros y homogéneos posible. Las métricas más comunes son:</p>
 <ol class="arabic">
 <li><p>Tasa de error de clasificación (Classification Error Rate)</p>
@@ -13953,7 +13989,7 @@ weighted avg       0.74      0.72      0.72       138
 <li><p><strong>Ejemplo de índice de Gini</strong></p>
 <p>Supongamos que tenemos un nodo con 100 observaciones distribuidas en tres clases: A, B y C.</p>
  <div align="center">
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Clase</p></th>
 <th class="head"><p>Cantidad de observaciones</p></th>
@@ -13975,6 +14011,7 @@ weighted avg       0.74      0.72      0.72       138
 </tr>
 </tbody>
 </table>
+</div>
  </div>
 <p>Para calcular el índice de Gini en este nodo, utilizamos la fórmula:</p>
 <div class="math notranslate nohighlight">
@@ -14025,7 +14062,7 @@ weighted avg       0.74      0.72      0.72       138
 <li><p><strong>Ejemplo de entropía</strong></p>
 <p>Supongamos que tenemos un nodo con 100 observaciones distribuidas en tres clases: A, B y C.</p>
  <div align="center">
-<table class="table">
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Clase</p></th>
 <th class="head"><p>Cantidad de observaciones</p></th>
@@ -14047,6 +14084,7 @@ weighted avg       0.74      0.72      0.72       138
 </tr>
 </tbody>
 </table>
+</div>
  </div>
 <p>Para calcular la entropía en este nodo, utilizamos la fórmula:</p>
 <div class="math notranslate nohighlight">
@@ -14104,7 +14142,7 @@ $<span class="math notranslate nohighlight">\(
 </div>
 </section>
 <section id="idea-del-arbol-de-decision">
-<h4><strong>Idea del arbol de decisión</strong><a class="headerlink" href="#idea-del-arbol-de-decision" title="Permalink to this heading">#</a></h4>
+<h4><strong>Idea del arbol de decisión</strong><a class="headerlink" href="#idea-del-arbol-de-decision" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p>Miremos dos variables independientes en el siguiente gráfico</p></li>
 </ul>
@@ -14144,7 +14182,7 @@ $<span class="math notranslate nohighlight">\(
 <p>En un arbol de decisión, podemos tener un conjunto de entrenamiento con muchas características, esto hace que tengamos más splits y las ramificaciones sean más masivas.</p>
 </section>
 <section id="construccion-del-modelo-de-arbol-de-decision-con-sus-metricas">
-<h4><strong>Construcción del modelo de arbol de decisión con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-de-arbol-de-decision-con-sus-metricas" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo de arbol de decisión con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-de-arbol-de-decision-con-sus-metricas" title="Link to this heading">#</a></h4>
 <p>Los hiperparámetros de Decision Tree Classifier (<code class="docutils literal notranslate"><span class="pre">DecisionTreeClassifier</span></code>)</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">criterion</span></code></p>
@@ -15303,11 +15341,11 @@ weighted avg       0.82      0.82      0.82       138
 </section>
 </section>
 <section id="modelo-random-forest">
-<h3><strong>Modelo Random Forest</strong><a class="headerlink" href="#modelo-random-forest" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo Random Forest</strong><a class="headerlink" href="#modelo-random-forest" title="Link to this heading">#</a></h3>
 <p><strong>Random Forest</strong> es un algoritmo de aprendizaje supervisado, ampliamente utilizado tanto en problemas de clasificación como de regresión. Fue desarrollado como una extensión de los árboles de decisión para mejorar su precisión y evitar problemas de sobreajuste, mediante la creación de múltiples árboles de decisión y la combinación de sus resultados.</p>
 <p>Random Forest es un conjunto (o bosque) de árboles de decisión que, al combinar sus resultados, proporciona una predicción más precisa y estable que un solo árbol. La técnica detrás de Random Forest utiliza el método de “bagging” (Bootstrap Aggregating), donde se entrenan múltiples árboles independientes usando diferentes subconjuntos aleatorios de datos, y sus predicciones se promedian (regresión) o se eligen por voto mayoritario (clasificación).</p>
 <section id="caracteristicas-del-modelo">
-<h4><strong>Características del modelo</strong><a class="headerlink" href="#caracteristicas-del-modelo" title="Permalink to this heading">#</a></h4>
+<h4><strong>Características del modelo</strong><a class="headerlink" href="#caracteristicas-del-modelo" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Modelo de Ensemble:</strong> Utiliza múltiples árboles de decisión que colaboran para la predicción.</p></li>
 <li><p><strong>Aleatorización:</strong> Realiza selección aleatoria tanto de muestras (bootstrap) como de características en cada nodo, lo que contribuye a la reducción del sobreajuste.</p></li>
@@ -15336,7 +15374,7 @@ weighted avg       0.82      0.82      0.82       138
 </div>
 </section>
 <section id="construccion-del-modelo-de-random-forest">
-<h4><strong>Construcción del modelo de Random Forest</strong><a class="headerlink" href="#construccion-del-modelo-de-random-forest" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo de Random Forest</strong><a class="headerlink" href="#construccion-del-modelo-de-random-forest" title="Link to this heading">#</a></h4>
 <p>Los hiperparámetros para <strong>Random Forest</strong> son:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">n_estimators</span></code></p>
@@ -16890,13 +16928,13 @@ weighted avg       0.83      0.83      0.83       138
 </section>
 </section>
 <section id="modelo-de-xgboost">
-<h3><strong>Modelo de XGBoost</strong><a class="headerlink" href="#modelo-de-xgboost" title="Permalink to this heading">#</a></h3>
+<h3><strong>Modelo de XGBoost</strong><a class="headerlink" href="#modelo-de-xgboost" title="Link to this heading">#</a></h3>
 <p><strong>XGBoost (Extreme Gradient Boosting)</strong> es un algoritmo de aprendizaje supervisado basado en árboles de decisión, diseñado para mejorar el rendimiento y la velocidad de los modelos de boosting. Su característica principal es el uso de gradiente boosting optimizado, lo cual permite crear modelos altamente eficientes y precisos, especialmente adecuado para grandes conjuntos de datos.</p>
 <section id="definicion-de-xgboost">
-<h4><strong>Definición de XGboost</strong><a class="headerlink" href="#definicion-de-xgboost" title="Permalink to this heading">#</a></h4>
+<h4><strong>Definición de XGboost</strong><a class="headerlink" href="#definicion-de-xgboost" title="Link to this heading">#</a></h4>
 <p>XGBoost es un algoritmo de boosting basado en el principio de <strong>Gradient Boosting</strong>, donde múltiples árboles se entrenan secuencialmente, y cada nuevo árbol corrige los errores de los árboles anteriores. XGBoost introduce optimizaciones para aumentar la velocidad, reducir el uso de memoria y mejorar la precisión en comparación con otros algoritmos de boosting.</p>
 <section id="formula-matematica">
-<h5><strong>Fórmula matemática</strong><a class="headerlink" href="#formula-matematica" title="Permalink to this heading">#</a></h5>
+<h5><strong>Fórmula matemática</strong><a class="headerlink" href="#formula-matematica" title="Link to this heading">#</a></h5>
 <p>XGBoost minimiza una función de pérdida usando un enfoque de optimización basado en el gradiente. Para cada paso <span class="math notranslate nohighlight">\(t\)</span> en el modelo, se ajusta un nuevo árbol <span class="math notranslate nohighlight">\(f_t\)</span> para reducir los errores residuales de la predicción anterior. La predicción se actualiza como:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -16911,7 +16949,7 @@ weighted avg       0.83      0.83      0.83       138
 </section>
 </section>
 <section id="id5">
-<h4><strong>Características del modelo</strong><a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h4>
+<h4><strong>Características del modelo</strong><a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
 <ul class="simple">
 <li><p><strong>Boosting por gradiente</strong>: Se enfoca en corregir los errores de los árboles previos, agregando árboles secuencialmente.</p></li>
 <li><p><strong>Regularización</strong>: Incluye términos de regularización <span class="math notranslate nohighlight">\(L_1\)</span> y <span class="math notranslate nohighlight">\(L_2\)</span> para reducir el sobreajuste.</p></li>
@@ -16940,7 +16978,7 @@ weighted avg       0.83      0.83      0.83       138
 </div>
 </section>
 <section id="construccion-del-modelo-xgboost-con-sus-metricas">
-<h4><strong>Construcción del modelo XGboost con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-xgboost-con-sus-metricas" title="Permalink to this heading">#</a></h4>
+<h4><strong>Construcción del modelo XGboost con sus métricas</strong><a class="headerlink" href="#construccion-del-modelo-xgboost-con-sus-metricas" title="Link to this heading">#</a></h4>
 <p>Los hiperparámetros para <code class="docutils literal notranslate"><span class="pre">XGBoost</span></code> son:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">n_estimators</span></code></p>
@@ -18527,7 +18565,7 @@ weighted avg       0.82      0.82      0.82       138
 </div>
 </div>
 <section id="hiperparametros-con-optimizacion-bayesiana">
-<h5><strong>Hiperparámetros con optimización bayesiana</strong><a class="headerlink" href="#hiperparametros-con-optimizacion-bayesiana" title="Permalink to this heading">#</a></h5>
+<h5><strong>Hiperparámetros con optimización bayesiana</strong><a class="headerlink" href="#hiperparametros-con-optimizacion-bayesiana" title="Link to this heading">#</a></h5>
 <p>La búsqueda <strong>grid search</strong> y <strong>random search</strong> pueden generar buenos resultados, sobre todo cuando se reduce el rango de exploración. Sin embargo, ninguna de ellas tiene en cuenta los resultados obtenidos hasta el momento, lo que les impide centrar la búsqueda en las regiones de mayor interés y evitar las innecesarias.</p>
 <p>Una alternativa es utilizar métodos de optimización bayesiana para buscar hiperparámetros. En términos generales, la optimización bayesiana de hiperparámetros consiste en crear un modelo probabilístico en el que la función objetivo es la métrica de validación del modelo (RMSE, AUC, precisión…). Con esta estrategia, la búsqueda se redirige en cada iteración a las regiones de mayor interés. El objetivo final es reducir el número de combinaciones de hiperparámetros con las que se evalúa el modelo, eligiendo sólo los mejores candidatos. Este enfoque es especialmente ventajoso cuando el espacio de búsqueda es muy grande o la evaluación del modelo es muy lenta.</p>
 <div class="cell docutils container">
@@ -19492,7 +19530,7 @@ div.sk-label-container:hover .sk-estimator-doc-link.fitted:hover,
 </section>
 </section>
 <section id="id6">
-<h4><strong>Análisis completo de los modelos</strong><a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h4>
+<h4><strong>Análisis completo de los modelos</strong><a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
 <p>En esta sección se realizará un análisis completo para escoger el mejor modelo.</p>
 <ul class="simple">
 <li><p>Carguemos las librerias</p></li>
@@ -19948,16 +19986,12 @@ XGBoost: 0.827 (0.067)
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -19965,6 +19999,7 @@ XGBoost: 0.827 (0.067)
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -20209,6 +20244,7 @@ By Carlos de Oro Aguado
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2026, Msc Carlos de Oro Aguado.
@@ -20235,8 +20271,8 @@ By Carlos de Oro Aguado
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
