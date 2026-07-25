@@ -188,6 +188,7 @@
 <li class="toctree-l1"><a class="reference internal" href="modulo_1.html"><strong>Módulo 1: Introducción y entorno de trabajo</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulo_2.html"><strong>Módulo 2: Exploración y preparación de datos</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulo_3.html"><strong>Módulo 3: Tratamiento de datos faltantes y outliers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modulo_4.html"><strong>Módulo 5: Modelo de Regresión</strong></a></li>
 </ul>
 
     </div>
@@ -441,11 +442,122 @@ document.write(`
 <p>Carguemos el conjunto de datos:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span>  <span class="c1"># TU CODIGO AQUI</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;_data\datamanip\sales.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>  
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Unnamed: 0</th>
+      <th>store</th>
+      <th>type</th>
+      <th>department</th>
+      <th>date</th>
+      <th>weekly_sales</th>
+      <th>is_holiday</th>
+      <th>temperature_c</th>
+      <th>fuel_price_usd_per_l</th>
+      <th>unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-02-05</td>
+      <td>24924.50</td>
+      <td>False</td>
+      <td>5.727778</td>
+      <td>0.679451</td>
+      <td>8.106</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-03-05</td>
+      <td>21827.90</td>
+      <td>False</td>
+      <td>8.055556</td>
+      <td>0.693452</td>
+      <td>8.106</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-04-02</td>
+      <td>57258.43</td>
+      <td>False</td>
+      <td>16.816667</td>
+      <td>0.718284</td>
+      <td>7.808</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-05-07</td>
+      <td>17413.94</td>
+      <td>False</td>
+      <td>22.527778</td>
+      <td>0.748928</td>
+      <td>7.808</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-06-04</td>
+      <td>17558.09</td>
+      <td>False</td>
+      <td>27.050000</td>
+      <td>0.714586</td>
+      <td>7.808</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -455,11 +567,132 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>store</th>
+      <th>type</th>
+      <th>department</th>
+      <th>date</th>
+      <th>weekly_sales</th>
+      <th>is_holiday</th>
+      <th>temperature_c</th>
+      <th>fuel_price_usd_per_l</th>
+      <th>unemployment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-02-05</td>
+      <td>24924.50</td>
+      <td>False</td>
+      <td>5.727778</td>
+      <td>0.679451</td>
+      <td>8.106</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-03-05</td>
+      <td>21827.90</td>
+      <td>False</td>
+      <td>8.055556</td>
+      <td>0.693452</td>
+      <td>8.106</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-04-02</td>
+      <td>57258.43</td>
+      <td>False</td>
+      <td>16.816667</td>
+      <td>0.718284</td>
+      <td>7.808</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-05-07</td>
+      <td>17413.94</td>
+      <td>False</td>
+      <td>22.527778</td>
+      <td>0.748928</td>
+      <td>7.808</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4</td>
+      <td>1</td>
+      <td>A</td>
+      <td>1</td>
+      <td>2010-06-04</td>
+      <td>17558.09</td>
+      <td>False</td>
+      <td>27.050000</td>
+      <td>0.714586</td>
+      <td>7.808</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Informacion del conjunto de datos</span>
-<span class="c1"># TU CODIGO AQUI</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 10774 entries, 0 to 10773
+Data columns (total 10 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   id                    10774 non-null  int64  
+ 1   store                 10774 non-null  int64  
+ 2   type                  10774 non-null  object 
+ 3   department            10774 non-null  int64  
+ 4   date                  10774 non-null  object 
+ 5   weekly_sales          10774 non-null  float64
+ 6   is_holiday            10774 non-null  bool   
+ 7   temperature_c         10774 non-null  float64
+ 8   fuel_price_usd_per_l  10774 non-null  float64
+ 9   unemployment          10774 non-null  float64
+dtypes: bool(1), float64(4), int64(3), object(2)
+memory usage: 768.2+ KB
 </pre></div>
 </div>
 </div>
@@ -472,9 +705,73 @@ document.write(`
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importar matplotlib</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="c1"># Histograma de las ventas semanales</span>
-<span class="c1"># TU CODIGO AQUI</span>
+<span class="c1"># Histograma de las ventas semanales </span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;weekly_sales&#39;</span><span class="p">],</span> <span class="n">bins</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span> <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Histograma de Ventas Semanales&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Ventas Semanales&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/b1cf897c09e035326949f58764186797ed562edd45f9e829518e756fe6d3ea7d.png" src="_images/b1cf897c09e035326949f58764186797ed562edd45f9e829518e756fe6d3ea7d.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">stats</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;weekly_sales&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Figure</span><span class="p">()</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">add_trace</span><span class="p">(</span><span class="n">go</span><span class="o">.</span><span class="n">Histogram</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="p">,</span>
+    <span class="n">nbinsx</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+    <span class="n">marker_color</span><span class="o">=</span><span class="s1">&#39;steelblue&#39;</span><span class="p">,</span>
+    <span class="n">opacity</span><span class="o">=</span><span class="mf">0.75</span><span class="p">,</span>
+    <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Ventas Semanales&#39;</span>
+    <span class="c1"># Sin histnorm -&gt; por defecto es conteo (frecuencia)</span>
+<span class="p">))</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Histograma de Ventas Semanales&#39;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Ventas Semanales&#39;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">,</span>
+    <span class="n">bargap</span><span class="o">=</span><span class="mf">0.05</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_white&#39;</span><span class="p">,</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
+        <span class="n">exponentformat</span><span class="o">=</span><span class="s1">&#39;none&#39;</span><span class="p">,</span>
+        <span class="n">tickformat</span><span class="o">=</span><span class="s1">&#39;,&#39;</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">weekly_sales</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count     10774.000000
+mean      23843.950149
+std       30220.387557
+min       -1098.000000
+25%        3867.115000
+50%       12049.065000
+75%       32349.850000
+max      293966.050000
+Name: weekly_sales, dtype: float64
 </pre></div>
 </div>
 </div>
@@ -501,9 +798,10 @@ document.write(`
 <span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">gaussian_kde</span>
 
 <span class="c1"># Estimación de densidad usando KDE</span>
-<span class="c1"># tu codigo aquí</span>
-<span class="c1"># tu codigo aquí</span>
-<span class="c1"># tu codigo aquí</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuel_price_usd_per_l&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">kde</span> <span class="o">=</span> <span class="n">gaussian_kde</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">x_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">data</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">y_vals</span> <span class="o">=</span> <span class="n">kde</span><span class="p">(</span><span class="n">x_vals</span><span class="p">)</span>
 
 <span class="c1"># Gráfico</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
@@ -517,6 +815,30 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/807872236b0f61131678f422a33417a9c6bcbbbe383929c4c3d12e05ce2de92a.png" src="_images/807872236b0f61131678f422a33417a9c6bcbbbe383929c4c3d12e05ce2de92a.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.figure_factory</span> <span class="k">as</span> <span class="nn">ff</span>
+
+<span class="c1"># Gráfico de densidad interactivo con Plotly</span>
+<span class="n">interactive_data</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;fuel_price_usd_per_l&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">ff</span><span class="o">.</span><span class="n">create_distplot</span><span class="p">([</span><span class="n">interactive_data</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Precio combustible&#39;</span><span class="p">],</span> <span class="n">show_hist</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">show_rug</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">line_color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Densidad de precio del combustible (Plotly interactivo)&#39;</span><span class="p">,</span>
+    <span class="n">xaxis_title</span><span class="o">=</span><span class="s1">&#39;Precio USD por litro&#39;</span><span class="p">,</span>
+    <span class="n">yaxis_title</span><span class="o">=</span><span class="s1">&#39;Densidad&#39;</span><span class="p">,</span>
+    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_white&#39;</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 </div>
 </div>
 <div class="cell docutils container">
@@ -580,19 +902,28 @@ muestra los valores transformados en logaritmos de la variable del precio, y vem
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># diagrama de cajas y bigotes de la temperatura</span>
-<span class="c1"># TU CODIGO AQUI</span>
+<span class="n">temperature_values</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;temperature_c&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">boxplot</span><span class="p">([</span><span class="n">temperature_values</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Temperatura&#39;</span><span class="p">])</span>
+
+<span class="c1"># Añadir el punto del promedio</span>
+<span class="n">temp_mean</span> <span class="o">=</span> <span class="n">temperature_values</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">temp_mean</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Promedio: </span><span class="si">{</span><span class="n">temp_mean</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1"> °C&#39;</span><span class="p">)</span>
 
 <span class="c1"># Remover el nombre de la columna del eje X</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span>  
 
 <span class="c1"># Agregar título y etiquetas</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Gráfico de Cajas y Bigotes&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (°F)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Temperatura (°C)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 
 <span class="c1"># Mostrar el gráfico</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/71e392eafedbe697d6267968eae96e7844e1b0d78e3718693471415e1ac89bee.png" src="_images/71e392eafedbe697d6267968eae96e7844e1b0d78e3718693471415e1ac89bee.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -616,13 +947,60 @@ muestra los valores transformados en logaritmos de la variable del precio, y vem
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Contar el tipo de tienda</span>
-<span class="n">tipo</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">tipo</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+
+<span class="n">total</span> <span class="o">=</span> <span class="n">tipo</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
 <span class="c1"># Graficar el conteo de tipos de tienda en un gráfico de barras verticales</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tipo</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">tipo</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<span class="n">bars</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">tipo</span><span class="o">.</span><span class="n">index</span><span class="p">,</span> <span class="n">tipo</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;#A8D5A2&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Conteo de tipos de tienda&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Tipo de tienda&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Número de tiendas (%)&#39;</span><span class="p">)</span>
+
+<span class="c1"># Agregar etiqueta de conteo y porcentaje en la parte superior de cada barra</span>
+<span class="k">for</span> <span class="n">bar</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">bars</span><span class="p">,</span> <span class="n">tipo</span><span class="o">.</span><span class="n">values</span><span class="p">):</span>
+    <span class="n">pct</span> <span class="o">=</span> <span class="n">count</span> <span class="o">/</span> <span class="n">total</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="n">bar</span><span class="o">.</span><span class="n">get_x</span><span class="p">()</span> <span class="o">+</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_width</span><span class="p">()</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="n">bar</span><span class="o">.</span><span class="n">get_height</span><span class="p">()</span> <span class="o">+</span> <span class="n">total</span> <span class="o">*</span> <span class="mf">0.01</span><span class="p">,</span>
+             <span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1">  (</span><span class="si">{</span><span class="n">pct</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%)&#39;</span><span class="p">,</span> <span class="n">ha</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s1">&#39;bottom&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/674eaa0b637b2d11f991516cf4713749df5a53c9272edab83c7908f40f64fd9b.png" src="_images/674eaa0b637b2d11f991516cf4713749df5a53c9272edab83c7908f40f64fd9b.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+
+<span class="c1"># Gráfico interactivo de barras para el conteo de tipos de tienda</span>
+<span class="n">interactive_tipo</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+<span class="n">total</span> <span class="o">=</span> <span class="n">interactive_tipo</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">px</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="n">interactive_tipo</span><span class="o">.</span><span class="n">index</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="n">interactive_tipo</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="n">text</span><span class="o">=</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">count</span><span class="si">}</span><span class="s1"> (</span><span class="si">{</span><span class="n">count</span><span class="o">/</span><span class="n">total</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s1">.1f</span><span class="si">}</span><span class="s1">%)&#39;</span> <span class="k">for</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">interactive_tipo</span><span class="o">.</span><span class="n">values</span><span class="p">],</span>
+    <span class="n">labels</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="s1">&#39;Tipo de tienda&#39;</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="s1">&#39;Frecuencia&#39;</span><span class="p">},</span>
+    <span class="n">title</span><span class="o">=</span><span class="s1">&#39;Conteo de tipos de tienda (Plotly interactivo)&#39;</span><span class="p">,</span>
+    <span class="n">color_discrete_sequence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;#A8D5A2&#39;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="n">fig</span><span class="o">.</span><span class="n">update_traces</span><span class="p">(</span><span class="n">textposition</span><span class="o">=</span><span class="s1">&#39;outside&#39;</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">update_layout</span><span class="p">(</span>
+    <span class="n">yaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Frecuencia&#39;</span><span class="p">),</span>
+    <span class="n">xaxis</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s1">&#39;Tipo de tienda&#39;</span><span class="p">),</span>
+    <span class="n">template</span><span class="o">=</span><span class="s1">&#39;plotly_white&#39;</span><span class="p">,</span>
+    <span class="n">uniformtext_minsize</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">uniformtext_mode</span><span class="o">=</span><span class="s1">&#39;hide&#39;</span><span class="p">,</span>
+    <span class="n">margin</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">t</span><span class="o">=</span><span class="mi">60</span><span class="p">,</span> <span class="n">b</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 </div>
 </div>
 <div class="cell docutils container">

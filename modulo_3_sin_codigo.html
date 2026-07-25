@@ -188,6 +188,7 @@
 <li class="toctree-l1"><a class="reference internal" href="modulo_1.html"><strong>Módulo 1: Introducción y entorno de trabajo</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulo_2.html"><strong>Módulo 2: Exploración y preparación de datos</strong></a></li>
 <li class="toctree-l1"><a class="reference internal" href="modulo_3.html"><strong>Módulo 3: Tratamiento de datos faltantes y outliers</strong></a></li>
+<li class="toctree-l1"><a class="reference internal" href="modulo_4.html"><strong>Módulo 5: Modelo de Regresión</strong></a></li>
 </ul>
 
     </div>
@@ -430,7 +431,26 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Informacion del dataset</span>
-<span class="c1"># TU CODIGO AQUI</span>
+<span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 607 entries, 0 to 606
+Data columns (total 8 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Working_Year          595 non-null    float64
+ 1   Designation           600 non-null    object 
+ 2   Experience            607 non-null    object 
+ 3   Employment_Status     607 non-null    object 
+ 4   Employee_Location     607 non-null    object 
+ 5   Company_Size          607 non-null    object 
+ 6   Remote_Working_Ratio  607 non-null    int64  
+ 7   Salary_USD            597 non-null    float64
+dtypes: float64(2), int64(1), object(5)
+memory usage: 38.1+ KB
 </pre></div>
 </div>
 </div>
@@ -441,10 +461,10 @@ document.write(`
 <span class="n">df_va</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
-<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
 <span class="c1"># Calcular el porcentaje de valores faltantes</span>
-<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">missing_values</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 
 <span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
 <span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
@@ -456,16 +476,83 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Valores Faltantes</th>
+      <th>Porcentaje Faltante (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Working_Year</th>
+      <td>12</td>
+      <td>1.976936</td>
+    </tr>
+    <tr>
+      <th>Designation</th>
+      <td>7</td>
+      <td>1.153213</td>
+    </tr>
+    <tr>
+      <th>Experience</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Employment_Status</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Employee_Location</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Company_Size</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Remote_Working_Ratio</th>
+      <td>0</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>Salary_USD</th>
+      <td>10</td>
+      <td>1.647446</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <section id="eliminacion-de-datos-faltantes">
 <h3><strong>Eliminación de datos faltantes</strong><a class="headerlink" href="#eliminacion-de-datos-faltantes" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Coloquemos un umbral</span>
-<span class="n">umbral</span> <span class="o">=</span>  <span class="c1"># TU CODIGO</span>
+<span class="n">umbral</span> <span class="o">=</span>  <span class="nb">len</span><span class="p">(</span><span class="n">df_va</span><span class="p">)</span> <span class="o">*</span> <span class="mf">0.05</span>  <span class="c1"># Por ejemplo, 10% del total de filas</span>
 
 <span class="c1"># Selecciona columnas con valores faltantes &lt;= umbral</span>
-<span class="n">cols_to_drop</span> <span class="o">=</span> <span class="n">df_va</span> <span class="o">.</span><span class="n">columns</span><span class="p">[</span> <span class="c1"># TU CODIGO]</span>
+<span class="n">cols_to_drop</span> <span class="o">=</span> <span class="n">df_va</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="n">missing_values</span> <span class="o">&lt;=</span> <span class="n">umbral</span><span class="p">]</span>
 
 <span class="c1"># Elimina filas con valores faltantes en las columnas seleccionadas</span>
 <span class="n">df_va</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="n">cols_to_drop</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -476,7 +563,26 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># informacion del dataset ajustado</span>
- <span class="c1"># TU CODIGO</span>
+<span class="n">df_va</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 578 entries, 0 to 606
+Data columns (total 8 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Working_Year          578 non-null    float64
+ 1   Designation           578 non-null    object 
+ 2   Experience            578 non-null    object 
+ 3   Employment_Status     578 non-null    object 
+ 4   Employee_Location     578 non-null    object 
+ 5   Company_Size          578 non-null    object 
+ 6   Remote_Working_Ratio  578 non-null    int64  
+ 7   Salary_USD            578 non-null    float64
+dtypes: float64(2), int64(1), object(5)
+memory usage: 40.6+ KB
 </pre></div>
 </div>
 </div>
@@ -484,10 +590,10 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
-<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="n">df_va</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
 <span class="c1"># Calcular el porcentaje de valores faltantes</span>
-<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">missing_values</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_va</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 
 <span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
 <span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
@@ -499,6 +605,73 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Valores Faltantes</th>
+      <th>Porcentaje Faltante (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Working_Year</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Designation</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Experience</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Employment_Status</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Employee_Location</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Company_Size</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Remote_Working_Ratio</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Salary_USD</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Otra forma para eliminar los datos faltantes es:</p>
 <div class="cell docutils container">
@@ -507,7 +680,33 @@ document.write(`
 <span class="n">df_2</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="c1"># eliminar las filas con Nans</span>
-<span class="n">df_clean</span> <span class="o">=</span>  <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">df_clean</span> <span class="o">=</span>  <span class="n">df_2</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_clean</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+Index: 578 entries, 0 to 606
+Data columns (total 8 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   Working_Year          578 non-null    float64
+ 1   Designation           578 non-null    object 
+ 2   Experience            578 non-null    object 
+ 3   Employment_Status     578 non-null    object 
+ 4   Employee_Location     578 non-null    object 
+ 5   Company_Size          578 non-null    object 
+ 6   Remote_Working_Ratio  578 non-null    int64  
+ 7   Salary_USD            578 non-null    float64
+dtypes: float64(2), int64(1), object(5)
+memory usage: 40.6+ KB
 </pre></div>
 </div>
 </div>
@@ -515,11 +714,11 @@ document.write(`
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Revisar los datos faltantes en el conjunto de datos</span>
-<span class="n">missing_values</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">missing_values</span> <span class="o">=</span> <span class="n">df_clean</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
 
 <span class="c1"># Calcular el porcentaje de valores faltantes</span>
 
-<span class="n">missing_percentage</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">missing_percentage</span> <span class="o">=</span> <span class="p">(</span><span class="n">missing_values</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_clean</span><span class="p">))</span> <span class="o">*</span> <span class="mi">100</span>
 <span class="c1"># Crear un DataFrame con el análisis de datos faltantes</span>
 <span class="n">missing_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="s1">&#39;Valores Faltantes&#39;</span><span class="p">:</span> <span class="n">missing_values</span><span class="p">,</span>
@@ -530,6 +729,73 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Valores Faltantes</th>
+      <th>Porcentaje Faltante (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Working_Year</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Designation</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Experience</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Employment_Status</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Employee_Location</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Company_Size</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Remote_Working_Ratio</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>Salary_USD</th>
+      <td>0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -537,8 +803,8 @@ document.write(`
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
 <span class="c1"># Contar frecuencias en cada DataFrame</span>
-<span class="n">original_counts</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
-<span class="n">clean_counts</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">original_counts</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Experience&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="n">clean_counts</span> <span class="o">=</span> <span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;Experience&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
 
 <span class="c1"># Unir ambos conteos en un solo DataFrame</span>
 <span class="n">comparison</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span>
@@ -560,13 +826,16 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/96d5934ab55ff271abd272bdabc2f5205796e40e1eb0132c4dfe4bb9e98eea55.png" src="_images/96d5934ab55ff271abd272bdabc2f5205796e40e1eb0132c4dfe4bb9e98eea55.png" />
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">chi2_contingency</span>
 
 <span class="c1"># Alinear categorías para evitar errores</span>
-<span class="n">comparison_table</span> <span class="o">=</span> <span class="c1"># TU CODIGO AQUI</span>
+<span class="n">comparison_table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">original_counts</span><span class="p">,</span> <span class="n">clean_counts</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">keys</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Original&#39;</span><span class="p">,</span> <span class="s1">&#39;Limpio&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
 
 <span class="c1"># Prueba chi-cuadrado</span>
 <span class="n">chi2</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">dof</span><span class="p">,</span> <span class="n">expected</span> <span class="o">=</span> <span class="n">chi2_contingency</span><span class="p">(</span><span class="n">comparison_table</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
@@ -576,6 +845,14 @@ document.write(`
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Estadístico chi²:&quot;</span><span class="p">,</span> <span class="n">chi2</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Grados de libertad:&quot;</span><span class="p">,</span> <span class="n">dof</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Valor p:&quot;</span><span class="p">,</span> <span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Prueba Chi-cuadrado de homogeneidad
+Estadístico chi²: 0.07153479107112373
+Grados de libertad: 3
+Valor p: 0.9950192620159025
 </pre></div>
 </div>
 </div>
@@ -592,8 +869,8 @@ document.write(`
 
 <span class="c1"># Crear gráfico de densidad</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="c1"># TU CODIGO AQUI, label=&#39;Original&#39;, linewidth=2)</span>
-<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="c1"># TU CODIGO AQUI, label=&#39;Limpio&#39;, linewidth=2, linestyle=&#39;--&#39;)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Remote_Working_Ratio&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Original&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">kdeplot</span><span class="p">(</span><span class="n">df_clean</span><span class="p">[</span><span class="s1">&#39;Remote_Working_Ratio&#39;</span><span class="p">],</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Limpio&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Distribución de &#39;Remote_Working_Ratio&#39; antes y después de eliminar NaN&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Remote Working Ratio&quot;</span><span class="p">)</span>
@@ -603,6 +880,9 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/d94cd0699ec8e1554a2fb75acf4f65b9e49c8107d0f99f21351dfcdce2f24fc9.png" src="_images/d94cd0699ec8e1554a2fb75acf4f65b9e49c8107d0f99f21351dfcdce2f24fc9.png" />
 </div>
 </div>
 <div class="cell docutils container">
